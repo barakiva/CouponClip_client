@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+/*@import "../node_modules/font-awesome/scss/font-awesome.scss";*/
+
+html {
+    height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 62.5%;
+}
+nav {
+  font-size: 1.6rem;
+}
+:root {
+   --primary-olive: #347800;	/* Main Primary color */
+   --fresh-olive: #4C9513;
+   --primary-grey: #F9F9FA;
+  /*.color-primary-3 { color: #265700 }*/
+  /*.color-primary-4 { color: #163200 }*/
+  /*.color-primary-1 { color: #68B42E }*/
+}

@@ -1,0 +1,11 @@
+:host {
+  flex: 6;
+  background-color: var(--primary-olive);
+}
+#bootstrap-override a  {
+  color: #F9F9FA;
+  font-size: 1.4rem;
+}
+#bootstrap-override .navbar-brand {
+  font-size: 2rem;
+}
