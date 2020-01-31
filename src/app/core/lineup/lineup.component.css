@@ -3,3 +3,15 @@
     background-color: #f8f8f8;
     border: black 1px solid;
 }
+#bootstrap-override {
+  padding: 0;
+}
+#bootstrap-override ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+nav li {
+  background-color: var(--freshest-olive);
+  flex: 1;
+}
