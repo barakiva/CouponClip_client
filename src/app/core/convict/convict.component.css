@@ -1,5 +1,6 @@
 :host {
     flex: 50;
     background-color: #f8f8f8;
-    border: black 1px solid;
+    box-shadow: 0 5px 10px rgba(0,0,0,1), 0 15px 40px rgba(0,0,0,0.2);
+
 }

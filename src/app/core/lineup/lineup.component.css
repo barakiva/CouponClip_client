@@ -1,7 +1,6 @@
 :host {
     flex:60;
     background-color: #f8f8f8;
-    border: black 1px solid;
 }
 #bootstrap-override {
   padding: 0;
