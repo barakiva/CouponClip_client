@@ -1,0 +1,16 @@
+@import "./src/sass/variables";
+
+:host {
+    flex:60;
+    background-color: #f8f8f8;
+}
+#bootstrap-override {
+  padding: 0;
+  ul {
+    @include navRow();
+  }
+  li {
+    background-color: $freshest-olive;
+    flex: 1;
+  }
+}

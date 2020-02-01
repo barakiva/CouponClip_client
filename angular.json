@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -89,15 +89,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/sass/styles.scss"
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
-                "src/sass"
+                "src/styles.scss"
               ]
-            }
-            ,
+            },
             "scripts": []
           }
         },
@@ -127,6 +125,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "mmm-coupons"
+    }
+  },
+  "defaultProject": "mmm-coupons",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-spine',
   templateUrl: './spine.component.html',
-  styleUrls: ['./spine.component.css']
+  styleUrls: ['./spine.component.scss']
 })
 export class SpineComponent implements OnInit {
 
