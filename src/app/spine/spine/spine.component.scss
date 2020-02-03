@@ -2,17 +2,22 @@
 
 :host {
     flex: 3;
-    background-color: $primary-grey;
+    background-color: $faded-grey;
     align-items: center;
-    box-shadow: inset 0 0 3px;
+    //box-shadow: inset 0 0 3px;
 
 }
 #bootstrap-override {
-  @include navCol();
-
+  @include navBar(column);
+  align-items: center;
   li {
+    color: $fresh-olive;
     margin: 8px;
-    //JUSTIFY IS HORIZONTAL
-    justify-content: center;
+  }
+  a{
+    font-size: 3rem;
+  }
+  :hover {
+    color: $freshest-olive;
   }
 }

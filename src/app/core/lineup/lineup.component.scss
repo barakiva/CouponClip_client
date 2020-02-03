@@ -2,15 +2,29 @@
 
 :host {
     flex:60;
-    background-color: #f8f8f8;
+    height: inherit;
+    box-shadow: inset 0px 0 5px rgba(0,0,0,0.15);
+    background-color: $light-grey;
+    //box-shadow: $dp4;
+  //background-color: #f8f8f8;
+
 }
 #bootstrap-override {
   padding: 0;
   ul {
-    @include navRow();
+    @include navBar(row);
+    justify-content: center;
   }
   li {
-    background-color: $freshest-olive;
+    //background-color: $freshest-olive;
+    display: flex;
     flex: 1;
+    box-shadow: inset 0px 0 5px rgba(0,0,0,0.15);
+    padding: 5px 5px 0px 5px;
+    //justify-content: space-between;
+  }
+  i {
+    padding-left: 10px;
+    color: $fresh-olive;
   }
 }
