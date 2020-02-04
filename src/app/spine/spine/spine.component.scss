@@ -12,12 +12,16 @@
   align-items: center;
   li {
     color: $fresh-olive;
-    margin: 8px;
+    margin: 4px;
   }
   a{
     font-size: 3rem;
   }
   :hover {
     color: $freshest-olive;
+  }
+  #dollar-shame {
+    font-size: 3.7rem;
+
   }
 }
