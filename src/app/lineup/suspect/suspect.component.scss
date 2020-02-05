@@ -1,0 +1,126 @@
+//@import "src/sass/variables";
+//
+//:host {
+//  display: flex;
+//  width: 100%;
+//  height: 100%;
+//  box-shadow: 1.5px 2.3px 2.5px 0px rgba(0,0,0,0.05);
+//  padding: 5px 0px 5px 10px;
+//  color: hsla(0, 0%, 15%, 0.9);
+//}
+//
+//#bootstrap-override {
+//  font-size: 1.5rem;
+//  img {
+//    width: 100%;
+//    border-radius: 1%;
+//  }
+//  i {
+//    color: yellow;
+//  }
+//  .label-box {
+//    display: flex;
+//    flex-direction: row;
+//    justify-content: space-between;
+//    padding-top: 5px;
+//    //align-items: start;
+//    h6 {
+//      color: hsla(0, 0%, 15%, 0.9);
+//    }
+//  }
+//  #offering-label {
+//    padding: 5px;
+//    //border-radius: 15%;
+//    color: $groupon-green;
+//    //box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+//    box-shadow: 0px 0px 2.5px rgba(0, 0, 0, 0.15);
+//    width: 200px;
+//    height: 35px;
+//    font-size: 1.0rem;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//  }
+//  .rating-box {
+//    @extend .label-box;
+//    justify-content: start;
+//    vertical-align: top;
+//    .rating-amount {
+//      display: inline;
+//      line-height: 24px;
+//      margin-left: 10px;
+//    }
+//  }
+//}
+//#discount-box {
+//
+//  #original-price {
+//    text-decoration: line-through;
+//    color: rgba(0,0,0,0.5);
+//  }
+//  #discounted-price {
+//
+//  }
+//  #discount-percentage {
+//    display: flex;
+//    background-color: $faded-green;
+//    color: $groupon-green;
+//    justify-content: center;
+//    border-radius: 4px;
+//    white-space: nowrap;
+//    div {
+//      font-size: 1rem;
+//    }
+//  }
+//  #get-coupon-btn {
+//    opacity: 0;
+//    transition: opacity 0.2s;
+//    transition-timing-function: ease-in;
+//    &:hover {
+//      opacity: 1;
+//    }
+//  }
+//}
+//
+//$ratingSize: 125px;
+//.star-rating {
+//  height: ($ratingSize/5);
+//  position: relative;
+//  width: $ratingSize;
+//  &:before { // inactive
+//    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTAgNTAiIGZpbGw9IiM3ZjhjOGQiID4gICAgPHBhdGggZD0iTSAyNSAyLjI3MzQzNzUgTCAxOC42MDkzNzUgMTguNDgwNDY5IEwgMC44MTA1NDY4OCAxOS40MTc5NjkgTCAxNC42NDg0MzggMzAuNDEyMTA5IEwgMTAuMDcwMzEyIDQ3LjIyMjY1NiBMIDI1IDM3Ljc3MTQ4NCBMIDM5LjkyOTY4OCA0Ny4yMjI2NTYgTCAzNS4zNTE1NjIgMzAuNDEyMTA5IEwgNDkuMTg5NDUzIDE5LjQxNzk2OSBMIDMxLjM5MDYyNSAxOC40ODA0NjkgTCAyNSAyLjI3MzQzNzUgeiI+PC9wYXRoPjwvc3ZnPg==");
+//    background-repeat: repeat-x;
+//    background-size: ($ratingSize/5);
+//    bottom: 0;
+//    content: "";
+//    display: block;
+//    height: ($ratingSize/5);
+//    left: 0;
+//    position: absolute;
+//    right: 0;
+//    top: 0;
+//    width: $ratingSize;
+//  }
+//  > span {
+//    display: block;
+//    text-indent: -10000px;
+//    width: $ratingSize;
+//    height: ($ratingSize/5);
+//    position: absolute;
+//    overflow: hidden;
+//    &:before { // active
+//      background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTAgNTAiIGZpbGw9IiNmMWM0MGYiID4gICAgPHBhdGggZD0iTSAyNSAyLjI3MzQzNzUgTCAxOC42MDkzNzUgMTguNDgwNDY5IEwgMC44MTA1NDY4OCAxOS40MTc5NjkgTCAxNC42NDg0MzggMzAuNDEyMTA5IEwgMTAuMDcwMzEyIDQ3LjIyMjY1NiBMIDI1IDM3Ljc3MTQ4NCBMIDM5LjkyOTY4OCA0Ny4yMjI2NTYgTCAzNS4zNTE1NjIgMzAuNDEyMTA5IEwgNDkuMTg5NDUzIDE5LjQxNzk2OSBMIDMxLjM5MDYyNSAxOC40ODA0NjkgTCAyNSAyLjI3MzQzNzUgeiI+PC9wYXRoPjwvc3ZnPg==");
+//      background-repeat: repeat-x;
+//      background-size: ($ratingSize/5);
+//      bottom: 0;
+//      content: "";
+//      display: block;
+//      height:($ratingSize/5);
+//      left: 0;
+//      position: absolute;
+//      right: 0;
+//      text-indent: 10000px;
+//      top: 0;
+//    }
+//  }
+//}
