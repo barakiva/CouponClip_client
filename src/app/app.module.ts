@@ -10,6 +10,7 @@ import { LineupComponent } from './lineup/lineup/lineup.component';
 import { ConvictComponent } from './core/convict/convict.component';
 import { SuspectComponent } from './lineup/suspect/suspect.component';
 import { TestCmpComponent } from './lineup/test-cmp/test-cmp.component';
+import {CouponApiService} from "./services/coupon-api.service";
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { TestCmpComponent } from './lineup/test-cmp/test-cmp.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [CouponApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
