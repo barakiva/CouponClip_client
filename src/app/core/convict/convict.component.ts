@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./convict.component.scss']
 })
 export class ConvictComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {

@@ -7,6 +7,8 @@ export class Coupon {
   private _description: string;
   private _averageStars: number;
 
+  constructor() {}
+
   get id(): number {
     return this._id;
   }
