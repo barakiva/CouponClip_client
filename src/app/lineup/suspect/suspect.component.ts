@@ -12,6 +12,8 @@ export class SuspectComponent implements OnInit {
   couponList: Coupon[];
   constructor(private couponApiService: CouponApiService) { }
   ngOnInit() {
+    // this.couponList = this.couponApiService.populateCoupons();
     this.couponList = this.couponApiService.populateCoupons();
+    console.log(this.couponList);
   }
 }

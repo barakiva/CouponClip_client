@@ -9,7 +9,6 @@ import { CoreComponent } from './core/core/core.component';
 import { LineupComponent } from './lineup/lineup/lineup.component';
 import { ConvictComponent } from './core/convict/convict.component';
 import { SuspectComponent } from './lineup/suspect/suspect.component';
-import { TestCmpComponent } from './lineup/test-cmp/test-cmp.component';
 import {CouponApiService} from "./services/coupon-api.service";
 
 @NgModule({
@@ -20,8 +19,7 @@ import {CouponApiService} from "./services/coupon-api.service";
     CoreComponent,
     LineupComponent,
     ConvictComponent,
-    SuspectComponent,
-    TestCmpComponent
+    SuspectComponent
   ],
   imports: [
     BrowserModule,
