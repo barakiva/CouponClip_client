@@ -10,10 +10,17 @@ import {Coupon} from "../../model/coupon";
 export class SuspectComponent implements OnInit {
 
   couponList: Coupon[];
+  hack: boolean = false;
   constructor(private couponApiService: CouponApiService) { }
+
   ngOnInit() {
     // this.couponList = this.couponApiService.populateCoupons();
+
+  }
+  hackIt(){
     this.couponList = this.couponApiService.populateCoupons();
+    console.log("COups are,...");
     console.log(this.couponList);
+    this.hack = true;
   }
 }

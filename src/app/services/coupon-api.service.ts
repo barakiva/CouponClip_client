@@ -12,21 +12,17 @@ export class CouponApiService {
   constructor() { }
 
   public populateCoupons(): Coupon[] {
-
     for(let i = 0; i < 10; i++) {
       this.couponList.push(this.makeCoupon());
     }
-    //
-    // this.couponList.forEach(function (){
-    //   console.log(this);
-    // });
+    console.log("DOne populating!");
     return this.couponList;
   }
 
   public makeCoupon(): Coupon {
     return this.couponBuilder
       .id(1)
-      .picUrl('assets/hot_dogs.jpg')
+      .picUrl('assets/food_pics/steak.jpg')
       .title('Dougie\'s Hot Dogs')
       .location('3 Min walk from Time\'s square')
       .reviewCount(9000)
