@@ -12,7 +12,7 @@ export class CouponApiService {
   constructor() { }
 
   public populateCoupons(): Coupon[] {
-    for(let i = 0; i < 10; i++) {
+    for(let i = 0; i < 9; i++) {
       this.couponList.push(this.makeCoupon());
     }
     console.log("DOne populating!");

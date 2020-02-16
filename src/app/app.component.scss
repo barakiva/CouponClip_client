@@ -2,13 +2,13 @@
 
 :host {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  @include navBar(column);
 }
 
 
 #bottom {
   @include box(row);
+  flex: 95;
 }
 #core {
   flex: 97;

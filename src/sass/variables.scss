@@ -17,13 +17,10 @@ $test-color: beige;
 @mixin navBar($direction){
   display: flex;
   flex-direction: $direction;
-  width: 100%;
-
 }
 
 @mixin box($direction) {
   display: flex;
-  height: inherit;
   flex-direction: $direction;
 }
 

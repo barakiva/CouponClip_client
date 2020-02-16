@@ -1,16 +1,18 @@
 @import "src/sass/variables";
 
 :host {
-    flex:60;
-    height: inherit;
-    box-shadow: inset 0px 0 5px rgba(0,0,0,0.15);
-    background-color: $light-grey;
-    //box-shadow: $dp4;
-  //background-color: #f8f8f8;
+  flex:60;
+  @include navBar(column);
+  height: inherit;
+  box-shadow: inset 0px 0 5px rgba(0,0,0,0.15);
+  background-color: $light-grey;
+  //box-shadow: $dp4;
+//background-color: #f8f8f8;
 
 }
-#bootstrap-override {
+#lineup-toolbar {
   padding: 0;
+  flex: 5;
   ul {
     @include navBar(row);
     justify-content: center;
@@ -29,7 +31,8 @@
   }
 }
 #suspect-box {
-  display: flex;
+  flex: 95;
+  @include navBar(row);
   flex-wrap: wrap;
-  flex-direction: row;
+  //align-content: stretch;
 }
