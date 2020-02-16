@@ -19,4 +19,9 @@
     </li>
   </ul>
 </nav>
-<app-suspect></app-suspect>
+<button (click)="hackIt()">Pop</button>
+<div id="suspect-box" >
+  <app-suspect *ngFor="let coupon of couponList"
+               [coupon]="coupon">
+  </app-suspect>
+</div>

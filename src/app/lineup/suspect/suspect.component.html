@@ -1,30 +1,26 @@
-<p>Suspect works</p>
-<button (click)="hackIt()">Pop</button>
-<ul *ngIf="hack">
-  <li *ngFor="let coupon of couponList"  id="bootstrap-override">
-    <div class="img-box">
-      <img [src]="coupon.picUrl" width="150">
+<div  id="bootstrap-override">
+  <div class="img-box">
+    <img [src]="coupon.picUrl" width="150">
+  </div>
+  <div class="label-box">
+    <h6>{{coupon.title}}</h6>
+    <div id="offering-label"><span>Two Hot Dogs</span></div>
+  </div>
+  <div class="label-box rating-box">
+    <div class="star-rating">
+      <span style="width: 85%"></span>
     </div>
-    <div class="label-box">
-      <h6>{{coupon.title}}</h6>
-      <div id="offering-label"><span>Two Hot Dogs</span></div>
+    <span class="rating-amount">({{coupon.reviewCount}})</span>
+  </div>
+  <div id="discount-box" class="label-box">
+    <span id="original-price">$10</span>
+    <span id="discounted-price">$5</span>
+    <div id="discount-percentage">
+      <div>50% OFF</div>
     </div>
-    <div class="label-box rating-box">
-      <div class="star-rating">
-        <span style="width: 85%"></span>
-      </div>
-      <span class="rating-amount">({{coupon.reviewCount}})</span>
-    </div>
-    <div id="discount-box" class="label-box">
-      <span id="original-price">$10</span>
-      <span id="discounted-price">$5</span>
-      <div id="discount-percentage">
-        <div>50% OFF</div>
-      </div>
-      <button id="get-coupon-btn" class="btn btn-primary">
-        Get Coupon
-      </button>
-    </div>
-    <!--  Offering with CTA on mouse hover in right-->
-  </li>
-</ul>
+    <button id="get-coupon-btn" class="btn btn-primary">
+      Get Coupon
+    </button>
+  </div>
+  <!--  Offering with CTA on mouse hover in right-->
+</div>
