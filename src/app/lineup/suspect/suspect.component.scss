@@ -1,14 +1,17 @@
 @import "src/sass/variables";
 
 :host {
-  display: flex;
   flex: 0 0 33.3%;
+  @include navBar(column);
   height: 250px;
   box-shadow: 1.5px 2.3px 2.5px 0px rgba(0,0,0,0.05);
-  padding: 5px 0px 5px 10px;
   color: hsla(0, 0%, 15%, 0.9);
 }
-#coupon-card {
+.img-box {
+  flex: 60;
+}
+.coupon-details {
+  flex:40;
   img {
     display: block;
     max-height:95px;
@@ -22,10 +25,6 @@
   i {
     color: yellow;
   }
-}
-
-#coupon-card {
-
   .label-box {
     display: flex;
     flex-direction: row;
@@ -60,6 +59,7 @@
     }
   }
 }
+
 #discount-box {
 
   #original-price {

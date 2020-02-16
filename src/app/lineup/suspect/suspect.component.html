@@ -1,17 +1,19 @@
-<div  id="coupon-card">
-  <div class="img-box">
-    <img [src]="coupon.picUrl">
-  </div>
+<div class="img-box">
+  <img [src]="coupon.picUrl">
+</div>
+
+<div class="coupon-details">
   <div class="label-box">
     <h6>{{coupon.title}}</h6>
-<!--    <div id="offering-label"><span>Two Hot Dogs</span></div>-->
   </div>
+
   <div class="label-box rating-box">
     <div class="star-rating">
       <span style="width: 85%"></span>
     </div>
     <span class="rating-amount">({{coupon.reviewCount}})</span>
   </div>
+
   <div id="discount-box" class="label-box">
     <span id="original-price">$10</span>
     <span id="discounted-price">$5</span>
@@ -22,5 +24,6 @@
       Get Coupon
     </button>
   </div>
-  <!--  Offering with CTA on mouse hover in right-->
 </div>
+
+  <!--  Offering with CTA on mouse hover in right-->

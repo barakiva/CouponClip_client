@@ -1,24 +1,22 @@
-<nav id="lineup-toolbar" class="navbar navbar-light mat-typography">
-  <ul class="nav navbar-nav">
-
-    <li class="nav-item">
-      <a>Things To Do<i class="fas fa-smile-wink fa-lg"></i></a>
-    </li>
-
-    <li class="nav-item">
-      <a>Best Value<i class="fas fa-thumbs-up fa-lg"></i>
-      </a>
-    </li>
-
-    <li class="nav-item">
-      <a>Most Loved<i class="fas fa-heart fa-lg"></i></a>
-    </li>
-
-    <li class="nav-item">
-      <a>See Everything!<i class="fas fa-infinity fa-lg"></i></a>
-    </li>
-  </ul>
+<nav id="lineup-toolbar" class="mat-typography">
+  <div>
+    <a>Things To Do</a>
+    <i class="fas fa-smile-wink fa-lg"></i>
+  </div>
+  <div>
+    <a>Best Value</a>
+    <i class="fas fa-thumbs-up fa-lg"></i>
+  </div>
+  <div>
+    <a>Most Loved</a>
+    <i class="fas fa-heart fa-lg"></i>
+  </div>
+  <div>
+    <a>See Everything!</a>
+    <i class="fas fa-infinity fa-lg"></i>
+  </div>
 </nav>
+
 <button (click)="hackIt()">Pop</button>
 <div id="suspect-box" >
   <app-suspect *ngFor="let coupon of couponList"

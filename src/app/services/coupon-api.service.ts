@@ -22,7 +22,7 @@ export class CouponApiService {
   public makeCoupon(): Coupon {
     return this.couponBuilder
       .id(1)
-      .picUrl('assets/food_pics/steak.jpg')
+      .picUrl('assets/food_pics/sushi_roll.png')
       .title('Dougie\'s Hot Dogs')
       .location('3 Min walk from Time\'s square')
       .reviewCount(9000)
