@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Coupon} from "../../model/coupon";
-import {CouponApiService} from "../../services/coupon-api.service";
+import {Coupon} from "../../../model/coupon";
+import {CouponApiService} from "../../../services/coupon-api.service";
 
 @Component({
   selector: 'app-lineup',

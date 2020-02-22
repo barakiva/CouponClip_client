@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CouponApiService} from "../../services/coupon-api.service";
-import {Coupon} from "../../model/coupon";
+import {CouponApiService} from "../../../services/coupon-api.service";
+import {Coupon} from "../../../model/coupon";
 
 @Component({
   selector: 'app-suspect',

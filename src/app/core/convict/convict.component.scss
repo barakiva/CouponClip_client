@@ -2,7 +2,14 @@
 
 :host {
     flex: 50;
+    display: flex;
+    padding: 30px;
     background-color: #f8f8f8;
     /*box-shadow: 0 5px 10px rgba(0,0,0,1), 0 15px 40px rgba(0,0,0,0.2);*/
     box-shadow: inset -5px 0 5px rgba(0,0,0,0.15);
+}
+.convict-box {
+  background-color: #f0f0f0;
+  height: auto;
+  width: 100%;
 }

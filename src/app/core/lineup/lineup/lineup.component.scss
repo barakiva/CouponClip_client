@@ -29,7 +29,14 @@ nav {
 }
 #suspect-box {
   flex: 96;
-  @include navBar(row);
-  flex-wrap: wrap;
+  padding-top: 15px;
+  //@include navBar(row);
+  //flex-wrap: wrap;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 2rem;
   //align-content: stretch;
 }
