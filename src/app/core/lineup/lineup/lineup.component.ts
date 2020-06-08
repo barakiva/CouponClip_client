@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Coupon} from "../../../model/coupon";
-import {CouponApiService} from "../../../services/coupon-api.service";
+import {Coupon} from '../../../model/coupon';
+import {CouponApiService} from '../../../services/coupon-api.service';
+import {DealApiService} from '../../../services/deal-api.service';
+import {Observable} from 'rxjs';
+import {DealWrapper} from '../../../model/deal-wrapper';
 
 @Component({
   selector: 'app-lineup',
@@ -8,15 +11,18 @@ import {CouponApiService} from "../../../services/coupon-api.service";
   styleUrls: ['./lineup.component.scss']
 })
 export class LineupComponent implements OnInit {
+  hack = false;
 
-  couponList: Coupon[];
-  hack: boolean = false;
-  constructor(private couponApiService: CouponApiService) { }
+  response: Observable<Observable<DealWrapper[]>>;
+  deals = [];
+  constructor(private dealAPi: DealApiService) { }
 
   ngOnInit() {
   }
-  hackIt(){
-    this.couponList = this.couponApiService.populateCoupons();
+  hackIt() {
+    this.dealAPi.makeRequest().subscribe(data => {
+      this.deals = data;
+    });
     this.hack = true;
   }
 

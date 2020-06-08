@@ -1,7 +1,7 @@
-import {Coupon} from "./coupon";
+import {Coupon} from './coupon';
 
 export class CouponBuilder {
-  private coupon : Coupon;
+  private coupon: Coupon;
 
   constructor() {
     this.reset();
@@ -27,7 +27,7 @@ export class CouponBuilder {
     return this;
   }
   public reviewCount(reviewCount: number): this {
-    this.coupon.reviewCount =reviewCount;
+    this.coupon.reviewCount = reviewCount;
     return this;
   }
   public description(description: string): this {

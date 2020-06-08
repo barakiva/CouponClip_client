@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Coupon} from "../model/coupon";
-import {CouponBuilder} from "../model/CouponBuilder";
+import {Coupon} from '../model/coupon';
+import {CouponBuilder} from '../model/CouponBuilder';
 
 @Injectable({
   providedIn: 'root'
@@ -12,10 +12,10 @@ export class CouponApiService {
   constructor() { }
 
   public populateCoupons(): Coupon[] {
-    for(let i = 0; i < 9; i++) {
+    for (let i = 0; i < 9; i++) {
       this.couponList.push(this.makeCoupon());
     }
-    console.log("DOne populating!");
+    console.log('DOne populating!');
     return this.couponList;
   }
 

@@ -17,9 +17,14 @@
   </div>
 </nav>
 
+
+
 <button (click)="hackIt()">Pop</button>
+<div>
+  {{deals | json}}
+</div>
 <div id="suspect-box" >
-  <app-suspect *ngFor="let coupon of couponList"
-               [coupon]="coupon">
-  </app-suspect>
+<!--  <app-suspect *ngFor="let coupon of couponList"-->
+<!--               [coupon]="coupon">-->
+<!--  </app-suspect>-->
 </div>

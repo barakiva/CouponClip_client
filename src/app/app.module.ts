@@ -8,7 +8,8 @@ import { SentryComponent } from './sentry/sentry/sentry.component';
 import { LineupComponent } from './core/lineup/lineup/lineup.component';
 import { ConvictComponent } from './core/convict/convict.component';
 import { SuspectComponent } from './core/lineup/suspect/suspect.component';
-import {CouponApiService} from "./services/coupon-api.service";
+import {CouponApiService} from './services/coupon-api.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {CouponApiService} from "./services/coupon-api.service";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [CouponApiService],
   bootstrap: [AppComponent]
