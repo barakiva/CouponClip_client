@@ -1,6 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {CouponApiService} from "../../../services/coupon-api.service";
-import {Coupon} from "../../../model/coupon";
 
 @Component({
   selector: 'app-suspect',
@@ -8,11 +6,11 @@ import {Coupon} from "../../../model/coupon";
   styleUrls: ['./suspect.component.scss']
 })
 export class SuspectComponent implements OnInit {
-  @Input() coupon;
+  @Input() deal;
+  readonly param = '&geometry=300x200';
   constructor() { }
 
   ngOnInit() {
   }
-  hackIt(){
-  }
+
 }

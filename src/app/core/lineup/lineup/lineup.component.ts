@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Coupon} from '../../../model/coupon';
-import {CouponApiService} from '../../../services/coupon-api.service';
 import {DealApiService} from '../../../services/deal-api.service';
 import {Observable} from 'rxjs';
 import {DealWrapper} from '../../../model/deal-wrapper';

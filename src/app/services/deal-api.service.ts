@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {DealWrapper} from '../model/deal-wrapper';
+import {Deal} from '../model/deal';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class DealApiService {
   readonly params = '/get-all-deals';
 
   constructor(private client: HttpClient) { }
-  makeRequest(): any {
-    return this.client.get<DealWrapper[]>(this.BASE_URL + this.params);
+  makeRequest(): Observable<Deal[]> {
+    return this.client.get<Deal[]>(this.BASE_URL + this.params);
   }
 }

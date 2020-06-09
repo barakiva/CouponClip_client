@@ -1,16 +1,22 @@
 @import "./src/sass/variables";
 
 :host {
-  flex: 6;
-  background-color: $primary-olive;
+  flex: 10;
+  background-color: $faded-grey;
 }
 #bootstrap-override {
 
-  a {
-    color: #F9F9FA;
-    font-size: 1.4rem;
-  }
   .navbar-brand {
-    font-size: 2rem;
+    color: $freshest-olive;
+    font-weight: bold;
+    margin-left: 50px;
+    font-size: 3rem;
+  }
+  form {
+
+  }
+  input {
+    border-radius: 6px;
+    height: 28px;
   }
 }

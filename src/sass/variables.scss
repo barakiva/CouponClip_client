@@ -1,5 +1,3 @@
-
-
 $dp4: 0 6px 10px 0 rgba(0,0,0,0.14),
       -6px 0px 10px 0 rgba(0,0,0,0.14);
 
@@ -9,8 +7,14 @@ $fresh-olive: #4C9513;
 $freshest-olive: #68B42E;
 //Achromatics
 $blued-grey: #F9F9FA;
+$lightest-grey:rgba(250,250,250,1.0);
 $light-grey:rgba(248,248,248,1.0);
 $faded-grey:rgba(246,246,246,1.0);
+
+$brand-primary:#FF9146;
+$text-on-primary:#FFF1E7;
+$text-on-white:#D3CDCD;
+
 $test-color: beige;
 
 
@@ -34,8 +38,7 @@ $test-color: beige;
 //JUSTIFY IS HORIZONTAL
 //ALIGN IS VERTICAL
 //#707174
-$grey: rgb(246,246,246);
-$light-grey: rgb(248,248,248);
+
 $faded-green: #EAFCDE;
 $groupon-green: #348700;
 $white-bg-text-color: #707174;

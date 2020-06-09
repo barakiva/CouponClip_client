@@ -1,17 +1,17 @@
 <div class="img-box">
-  <img [src]="coupon.picUrl">
+  <img [src]="deal.imageUrl + param">
 </div>
 
 <div class="coupon-details">
   <div class="label-box">
-    <h6>{{coupon.title}}</h6>
+    <h6>{{deal.title}}</h6>
   </div>
 
   <div class="label-box rating-box">
     <div class="star-rating">
       <span style="width: 85%"></span>
     </div>
-    <span class="rating-amount">({{coupon.reviewCount}})</span>
+<!--    <span class="rating-amount">({{deal.reviewCount}})</span>-->
   </div>
 
   <div id="discount-box" class="label-box">
