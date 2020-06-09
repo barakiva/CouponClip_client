@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs';
+import {DealWrapper} from '../../model/deal-wrapper';
+import {DealApiService} from '../../services/deal-api.service';
 
 @Component({
   selector: 'app-sentry',
@@ -7,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SentryComponent implements OnInit {
 
-  constructor() { }
+  response: Observable<Observable<DealWrapper[]>>;
+  constructor(private dealAPi: DealApiService) { }
 
   ngOnInit() {
   }

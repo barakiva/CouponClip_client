@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DealApiService} from '../../../services/deal-api.service';
 import {Observable} from 'rxjs';
 import {DealWrapper} from '../../../model/deal-wrapper';
@@ -9,7 +9,6 @@ import {DealWrapper} from '../../../model/deal-wrapper';
   styleUrls: ['./lineup.component.scss']
 })
 export class LineupComponent implements OnInit {
-  hack = false;
 
   response: Observable<Observable<DealWrapper[]>>;
   deals = [];
@@ -21,7 +20,7 @@ export class LineupComponent implements OnInit {
     this.dealAPi.makeRequest().subscribe(data => {
       this.deals = data;
     });
-    this.hack = true;
   }
+
 
 }

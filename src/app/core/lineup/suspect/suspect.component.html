@@ -3,22 +3,20 @@
 </div>
 
 <div class="coupon-details">
-  <div class="label-box">
-    <h6>{{deal.title}}</h6>
-  </div>
+  <h6 class="merchant-name">{{deal.merchant.name}}</h6>
 
-  <div class="label-box rating-box">
+  <div class="merchant-name rating-box">
     <div class="star-rating">
       <span style="width: 85%"></span>
     </div>
 <!--    <span class="rating-amount">({{deal.reviewCount}})</span>-->
   </div>
 
-  <div id="discount-box" class="label-box">
-    <span id="original-price">$10</span>
-    <span id="discounted-price">$5</span>
+  <div id="discount-box" class="merchant-name">
+    <span id="original-price">${{deal.value}}</span>
+    <span id="discounted-price">${{deal.price}}</span>
     <div id="discount-percentage">
-      <div>50% OFF</div>
+      <div>{{formatNumber()}} OFF</div>
     </div>
     <button id="get-coupon-btn" class="btn btn-primary">
       Get Coupon
