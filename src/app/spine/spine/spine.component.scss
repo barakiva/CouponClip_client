@@ -11,17 +11,18 @@
   @include navBar(column);
   align-items: center;
   li {
-    color: $fresh-olive;
+    color: $text-on-white;
     margin: 4px;
   }
   a{
     font-size: 3rem;
   }
   :hover {
-    color: $freshest-olive;
+    color: $brand-primary;
   }
   #dollar-shame {
     font-size: 3.7rem;
 
   }
+
 }

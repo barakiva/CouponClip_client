@@ -7,16 +7,65 @@
 #bootstrap-override {
 
   .navbar-brand {
-    color: $freshest-olive;
+    color: $brand-primary;
     font-weight: bold;
     margin-left: 50px;
     font-size: 3rem;
   }
   form {
+    @include navBar(row);
+    margin-left: 50px;
+    width: 50%;
+    #location-bar {
+      flex: 30;
+      @include navBar(row);
+      align-items: center;
+      color:$brand-primary;
+      i {
+        font-size: 1.8rem;
+        padding: 8px;
+      }
+      input {
+        border: $base-grey;
+        border-radius: 0px;
+        min-width: 0px;
+        width: 100%;
+      }
+      div {
+        background-color: white;
+        border-radius: 8px 0px 0px 8px;
+      }
+    }
+    #search-box {
+      flex: 70;
+      @include navBar(row);
+      button {
+        border-style: none;
+        background-color: $brand-primary;
+        color: $text-on-primary;
+        border-radius: 0px 8px 8px 0px;
+        outline: none;
+      }
+    }
+  }
 
+  .separator {
+    border-left: 1px solid $freshest-grey;
+    height: 20px;
   }
   input {
-    border-radius: 6px;
-    height: 28px;
+    font-size: 1.4rem;
+    outline: none;
+    margin: 0px;
+    padding: 8px;
+    height: 34px;
+    min-width: 0px;
+    width: 100%;
+    color: $base-grey;
+    border-style: none;
+
+  }
+  ::placeholder {
+    color: $freshest-grey;
   }
 }

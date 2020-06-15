@@ -1,5 +1,8 @@
 $dp4: 0 6px 10px 0 rgba(0,0,0,0.14),
       -6px 0px 10px 0 rgba(0,0,0,0.14);
+$dp1: 0 1px 1px 0 rgba(0,0,0,0.14),
+      0 2px 1px -1px rgba(0,0,0,0.12),
+      0 1px 3px 0 rgba(0,0,0,0.20);
 
 //Primary colors
 $primary-olive: #347800;
@@ -10,6 +13,10 @@ $blued-grey: #F9F9FA;
 $lightest-grey:rgba(250,250,250,1.0);
 $light-grey:rgba(248,248,248,1.0);
 $faded-grey:rgba(246,246,246,1.0);
+
+//New colors
+$base-grey: #707070;
+$freshest-grey: #D3CDCD;
 
 $brand-primary:#FF9146;
 $text-on-primary:#FFF1E7;

@@ -18,19 +18,19 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
-              "src/sass/styles.scss"
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/sass"
-              ]
-            },
+            "includePaths": [
+              "src/sass"
+            ]
+          },
             "scripts": []
           },
           "configurations": {
@@ -46,7 +46,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -94,7 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/sass/styles.scss"
+              "src/styles.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -135,12 +134,15 @@
   "defaultProject": "mmm-coupons",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "style": "scss"
     },
     "@schematics/angular": {
       "component": {
         "spec": false
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
