@@ -9,6 +9,8 @@ import { LineupComponent } from './core/lineup/lineup/lineup.component';
 import { ConvictComponent } from './core/convict/convict.component';
 import { SuspectComponent } from './core/lineup/suspect/suspect.component';
 import {HttpClientModule} from '@angular/common/http';
+import { UserDomainComponent } from './sentry/user-domain/user-domain.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import {HttpClientModule} from '@angular/common/http';
     SentryComponent,
     LineupComponent,
     ConvictComponent,
-    SuspectComponent
+    SuspectComponent,
+    UserDomainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

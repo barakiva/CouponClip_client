@@ -12,9 +12,9 @@ export class SuspectComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.deal.discountPercentage);
-    console.log(new Intl.NumberFormat('en-IN',
-      { style: 'percent', minimumFractionDigits: 0 }).format(this.deal.discountPercentage));
+    // console.log(this.deal.discountPercentage);
+    // console.log(new Intl.NumberFormat('en-IN',
+    //   { style: 'percent', minimumFractionDigits: 0 }).format(this.deal.discountPercentage));
 
   }
   public formatNumber(): string {

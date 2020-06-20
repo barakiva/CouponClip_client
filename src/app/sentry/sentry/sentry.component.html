@@ -3,20 +3,23 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-    <form class="form-inline my-2 my-lg-0">
+    <form [formGroup]="couponForm"
+          class="form-inline my-2 my-lg-0"
+          (ngSubmit)="onSearchSubmit(couponForm.value)">
 
       <div id="location-bar">
         <div>
           <i class="fas fa-map-marker-alt"></i>
         </div>
-        <input class="" placeholder="City...">
+        <input class="" formControlName="location" placeholder="City...">
       </div>
       <div class="separator"></div>
 
       <div id="search-box">
-        <input  type="search" placeholder="Search Anything..." aria-label="Search">
+        <input formControlName="query" type="search" placeholder="Search Anything..." aria-label="Search">
         <button class=" fas fa-search" type="submit"></button>
       </div>
 
     </form>
 </nav>
+<app-user-domain></app-user-domain>

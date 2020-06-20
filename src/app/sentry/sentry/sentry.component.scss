@@ -2,7 +2,11 @@
 
 :host {
   flex: 10;
+  @include navBar(row);
   background-color: $faded-grey;
+}
+nav {
+  flex: 80;
 }
 #bootstrap-override {
 
