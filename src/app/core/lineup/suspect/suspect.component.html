@@ -24,6 +24,11 @@
       Get Coupon
     </button>
   </div>
+  <div id="offering-box">
+    <span>{{(deal.shortTitle.length>30)? (deal.shortTitle |
+             slice:0:35)+'...':(deal.shortTitle)}}</span>
+  </div>
+
 </div>
 
   <!--  Offering with CTA on mouse hover in right-->

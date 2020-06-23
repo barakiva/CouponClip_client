@@ -6,6 +6,7 @@
   height: inherit;
   box-shadow: inset 0px 0 5px rgba(0,0,0,0.15);
   background-color: $light-grey;
+  padding: 5px 15px;
 }
 
 nav {
@@ -29,7 +30,7 @@ nav {
 }
 #suspect-box {
   flex: 96;
-  padding-top: 15px;
+  padding-top: 10px;
   //@include navBar(row);
   //flex-wrap: wrap;
   width: 100%;

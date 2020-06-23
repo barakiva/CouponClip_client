@@ -7,7 +7,8 @@ import {Deal} from '../model/deal';
   providedIn: 'root'
 })
 export class DealApiService {
-  readonly BASE_URL = 'http://localhost:8080/api';
+  // readonly BASE_URL = 'http://localhost:8080/api';
+  readonly BASE_URL = 'http://52.211.5.17/api';
   readonly PATH = "/location-and-query"
 
   subject: Subject<Deal[]> = new Subject();
@@ -26,7 +27,7 @@ export class DealApiService {
 
     this.client
       .get<Deal[]>(
-      this.BASE_URL + this.PATH,
+      this.BASE_URL +this.PATH,
         options
       )
       .subscribe(data => {

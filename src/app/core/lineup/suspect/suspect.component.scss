@@ -3,33 +3,29 @@
 :host {
   //flex: 0 0 33.3%;
   //@include navBar(column);
-  display: grid;
-  grid-template-rows: 63% 37%;
-  grid-template-areas: "image" "details";
-  height: 300px;
-  width: 300px;
+  @include navBar(column);
+  height: 335px;
+  width: 319px;
   box-shadow: $dp1;
   color: hsla(0, 0%, 15%, 0.9);
   overflow: hidden;
 }
 .img-box {
+  flex: 188;
   width:100%;
-  max-height:180px;
-  grid-area: image;
+  max-height:188px;
   img {
-    display: block;
-    width: 100%;
     height: auto;
     border-radius: 2%;
   }
 }
 .coupon-details {
-  grid-area: details;
+  flex: 147;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   text-overflow: '';
   white-space: nowrap;
-  //padding: 10px 10px;
+  padding: 5px 10px;
   h6 {
     font-size: 1.6rem;
   }
@@ -38,7 +34,6 @@
   }
   .merchant-name {
     grid-row: 1;
-    padding-top: 5px;
     color: hsla(0, 0%, 15%, 0.9);
     width: 300px;
     text-overflow: ellipsis;
@@ -60,7 +55,6 @@
     grid-row: 3;
   }
   #offering-label {
-    padding: 5px;
     //border-radius: 15%;
     color: $groupon-green;
     //box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
@@ -75,19 +69,25 @@
 }
 #discount-box {
   grid-row: 4;
+  display: flex;
   #original-price {
+    flex: 1;
     text-decoration: line-through;
     color: rgba(0,0,0,0.5);
   }
+  #discounted-price {
+    flex:1;
+  }
   #discount-percentage {
-    grid-row: 3;
     display: flex;
     background-color: $faded-green;
     color: $groupon-green;
     justify-content: center;
+    align-items: center;
     border-radius: 4px;
     white-space: nowrap;
     div {
+      font-weight: bold;
       font-size: 1rem;
     }
   }
@@ -100,7 +100,10 @@
     }
   }
 }
+#offering-box {
+  grid-row: 5;
 
+}
 
 
 
