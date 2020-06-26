@@ -2,6 +2,8 @@
 
 :host {
   height: 100%;
+  grid-column: 2/3;
+  grid-row: 2/3;
   box-shadow: inset 0px 0 5px rgba(0,0,0,0.15);
   background-color: $light-grey;
   padding: 5px 15px;

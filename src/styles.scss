@@ -11,7 +11,7 @@ body {
   //Overriding min height inheritance bug
   display: flex;
   flex-direction: column;
-  //overflow: scroll;
+  overflow: hidden;
 }
 
 html, body {
