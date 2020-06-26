@@ -1,29 +1,41 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "src/sass/variables";
-
 html {
-  height: 100vh;
-  font-size: 62.5%;
+  //Explicitly set to browser height so all children can dynamically inherit with %
+  height: 100%;
+}
+body {
+  //Set to browser height, yet expand to include dynamic children
+  min-height: 100%;
+  //Overriding min height inheritance bug
+  display: flex;
+  flex-direction: column;
+  //overflow: scroll;
 }
 
-body {
-  min-height: 100vh;
-  font-size: 1.6rem;
+html, body {
+  font-size: 62.5%;
   font-family: Roboto, sans-serif;
   font-weight: 300;
+
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
 }
 a {
   font-size: 1.8rem;
 }
-//.big-box {
-//  width: 200px;
-//  height:200px;
-//  background-color: $test-color;
-//  box-shadow: $dp4;
-//
-//  display: flex;
-//  align-content: center;
-//  align-items: center;
-//  justify-content: center;
-//}
+
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

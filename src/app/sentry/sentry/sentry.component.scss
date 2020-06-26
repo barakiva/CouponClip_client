@@ -1,9 +1,15 @@
 @import "./src/sass/variables";
 
 :host {
-  flex: 10;
+  grid-row: 1;
+  grid-column: 1/4;
   @include navBar(row);
   background-color: $faded-grey;
+  //position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 nav {
   flex: 80;

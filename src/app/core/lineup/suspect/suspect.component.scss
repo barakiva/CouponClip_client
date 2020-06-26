@@ -12,10 +12,12 @@
 }
 .img-box {
   flex: 188;
-  width:100%;
+  max-width:100%;
   max-height:188px;
   img {
     height: auto;
+    //Explicitly include dimensions to prevent layout shift in loading
+    //width: ;
     border-radius: 2%;
   }
 }

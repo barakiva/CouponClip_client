@@ -11,6 +11,7 @@ import { SuspectComponent } from './core/lineup/suspect/suspect.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserDomainComponent } from './sentry/user-domain/user-domain.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

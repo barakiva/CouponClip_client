@@ -1,17 +1,15 @@
 @import "./src/sass/variables";
 
 :host {
-  height: 100vh;
-  @include navBar(column);
+  flex: 1;
+  display: grid;
+  grid-template-rows: 5fr 95fr;
+  grid-template-columns: 5fr 95fr;
+  height: 100%;
 }
 
 
-#bottom {
-  @include box(row);
-  flex: 90;
-}
-#core {
-  flex: 97;
-  @include box(row);
+.overlay {
+  //grid-area: 1/1;
 }
 
