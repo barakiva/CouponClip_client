@@ -9,10 +9,14 @@
   box-shadow: $dp1;
   color: hsla(0, 0%, 15%, 0.9);
   overflow: hidden;
+  animation: 2s ease-in;
+  &:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
 }
 .img-box {
   flex: 188;
-  max-width:100%;
   max-height:188px;
   img {
     height: auto;
@@ -25,15 +29,18 @@
   flex: 147;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  gap: 2px;
   text-overflow: '';
   white-space: nowrap;
-  padding: 5px 10px;
-  h6 {
+  padding: 3px 10px;
+  h3 {
     font-size: 1.6rem;
   }
   i {
     color: yellow;
   }
+
   .merchant-name {
     grid-row: 1;
     color: hsla(0, 0%, 15%, 0.9);
@@ -41,10 +48,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    margin: 0;
   }
   .rating-box {
     grid-row: 2;
-    @extend .merchant-name;
     justify-content: start;
     vertical-align: top;
     .rating-amount {
@@ -69,18 +76,27 @@
     align-items: center;
   }
 }
-#discount-box {
+//.discount-box >
+
+.discount-box {
   grid-row: 4;
+  margin-top: -20px;
   display: flex;
-  #original-price {
-    flex: 1;
+  align-items: center;
+  justify-items: start;
+  & > *:not(:first-child)  {
+    margin-left: 8px;
+  }
+  .original-price {
     text-decoration: line-through;
     color: rgba(0,0,0,0.5);
+    font-weight: 700;
   }
-  #discounted-price {
-    flex:1;
+  .discounted-price {
+    color:$fresh-olive;
+    font-weight: 700;
   }
-  #discount-percentage {
+  .discount-percentage {
     display: flex;
     background-color: $faded-green;
     color: $groupon-green;
@@ -93,17 +109,10 @@
       font-size: 1rem;
     }
   }
-  #get-coupon-btn {
-    opacity: 0;
-    transition: opacity 0.2s;
-    transition-timing-function: ease-in;
-    &:hover {
-      opacity: 1;
-    }
-  }
 }
 #offering-box {
   grid-row: 5;
+  margin-top: -10px;
 
 }
 

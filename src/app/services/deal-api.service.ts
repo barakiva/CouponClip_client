@@ -7,7 +7,7 @@ import {Deal} from '../model/deal';
   providedIn: 'root'
 })
 export class DealApiService {
-  // readonly BASE_URL = 'http://localhost:8080/api';
+  // readonly BASE_URL = 'http://localhost:5000/api';
   readonly BASE_URL = 'http://52.211.5.17/api';
   readonly PATH = "/location-and-query"
 

@@ -2,16 +2,31 @@
 
 :host {
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: 1/3;
     background-color: $lightest-grey;
     align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    left: 0;
+    height: 100vh;
     //box-shadow: inset 0 0 3px;
     //position: fixed;
     //left: 0;
+
+  @media only screen and (max-width: 599px) {
+    display: none;
+  }
 }
-#bootstrap-override {
-  @include navBar(column);
-  align-items: center;
+nav {
+  margin-top: 66.25px;
+  ul {
+    list-style: none;
+    padding: 5px 10px;
+    @include navBar(column);
+    align-items: center;
+    justify-items: center;
+  }
   li {
     color: $text-on-white;
     margin: 0.4rem;
@@ -25,5 +40,4 @@
   #dollar-shame {
     font-size: 3.7rem;
   }
-
 }

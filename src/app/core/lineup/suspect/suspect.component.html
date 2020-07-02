@@ -3,26 +3,26 @@
 </div>
 
 <div class="coupon-details">
-  <h6 class="merchant-name">{{deal.merchant.name}}</h6>
 
-  <div class="merchant-name rating-box">
+  <h3 class="merchant-name">{{deal.merchant.name}}</h3>
+<!--  Rating-->
+  <div class="rating-box">
     <div class="star-rating">
-      <span style="width: 85%"></span>
+      <span [ngStyle]="{'width': 50% + 1}"></span>
     </div>
-<!--    <span class="rating-amount">({{deal.reviewCount}})</span>-->
+
   </div>
+<!--  location-->
   <div class="merchant-location">
     <span>{{deal.merchant.address}}</span>
   </div>
-  <div id="discount-box" class="merchant-name">
-    <span id="original-price">${{deal.value}}</span>
-    <span id="discounted-price">${{deal.price}}</span>
-    <div id="discount-percentage">
+<!--  Price Information-->
+  <div class="discount-box">
+    <span class="original-price">${{deal.value}}</span>
+    <span class="discounted-price">${{deal.price}}</span>
+    <div class="discount-percentage">
       <div>{{formatNumber()}} OFF</div>
     </div>
-    <button id="get-coupon-btn" class="btn btn-primary">
-      Get Coupon
-    </button>
   </div>
   <div id="offering-box">
     <span>{{(deal.shortTitle.length>30)? (deal.shortTitle |
