@@ -7,6 +7,9 @@
   box-shadow: inset 0px 0 5px rgba(0,0,0,0.15);
   background-color: $light-grey;
   padding: 5px 15px;
+  @media only screen and (max-width: 599px) {
+    grid-column: 1/3;
+}
 }
 
 #suspect-box {

@@ -1,16 +1,76 @@
 @import "./src/sass/variables";
 
 :host {
-    flex: 50;
-    display: flex;
-    padding: 30px;
-    background-color: #f8f8f8;
+    grid-row: 2/3;
+    @include navBar(column);
+    background-color: white;
     /*box-shadow: 0 5px 10px rgba(0,0,0,1), 0 15px 40px rgba(0,0,0,0.2);*/
-    box-shadow: inset -5px 0 5px rgba(0,0,0,0.15);
-    display: none;
+    box-shadow: 0 4px 24px rgba(61,64,71,.2);
+    width: 560px;
+    padding: 30px 30px 15px 30px;
+    height: auto;
+    animation: right 300ms ease 1;
+    z-index: 20;
+    //@keyframes right {
+    //  from {
+    //    transform: translateX(0);
+    //  }
+    //  to {
+    //    transform: translateX(520);
+    //  }
+    //}
 }
 .convict-box {
-  background-color: #f0f0f0;
-  height: auto;
+  @include navBar(column);
+  height: 100%;
   width: 100%;
+  justify-content: flex-end;
+  font-size: 1.6rem;
+  color: $text-on-white-spice;
+  h3 {
+    font-size: 3rem;
+  }
+  h4{
+    font-size: 2.2rem;
+    font-weight: 400;
+  }
+  img {
+    border-radius: 2%;
+  }
+  &-price {
+    @include navBar(row);
+    align-items: center;
+    justify-content: space-between;
+  }
+  .discount-box {
+    @include navBar(row);
+    justify-content: space-between;
+    span {
+      margin-right: 10px;
+    }
+  }
 }
+
+.button-box {
+  margin-top: auto;
+  justify-self: end;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  & button {
+    border: 1px solid transparent;
+    border-radius: 25px;
+    font-size: 1.9rem;
+    padding: 5px 20px;
+  }
+  button:first-child {
+    background-color: $text-on-primary;
+    color: $brand-primary;
+  }
+  button:nth-child(2) {
+    background-color: $brand-primary;
+    color: $text-on-primary;
+  }
+}
+
