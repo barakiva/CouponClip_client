@@ -20,6 +20,14 @@
     //  }
     //}
 }
+button {outline: none;}
+a {text-decoration: none; color: $text-on-white-spice;}
+.separator {
+  width:100%;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
 .convict-box {
   @include navBar(column);
   height: 100%;
@@ -42,17 +50,40 @@
     align-items: center;
     justify-content: space-between;
   }
-  .discount-box {
-    @include navBar(row);
-    justify-content: space-between;
-    span {
-      margin-right: 10px;
-    }
+  &-description {
+    margin-top: 15px;
+    font-size: 1.8rem;
+
+  }
+}
+.cta-box {
+  margin-top: auto;
+  font-size: 2.0rem;
+
+  &-savings span {
+    color: $freshest-olive;
+    font-weight: 700;
+  }
+}
+
+.discount-box {
+  @include navBar(row);
+  justify-content: space-between;
+  span {
+    margin-right: 10px;
+  }
+  .previous-price {
+    text-decoration: line-through;
+    color: #777C83;
+  }
+  .discount-percentage {
+    color: $freshest-olive;
+    font-weight: 700;
   }
 }
 
 .button-box {
-  margin-top: auto;
+  margin-top:10px;
   justify-self: end;
   display: flex;
   flex-direction: row;
@@ -67,10 +98,18 @@
   button:first-child {
     background-color: $text-on-primary;
     color: $brand-primary;
+    &:hover {
+      background-color: $strong-peach;
+      transition: 500ms ease;
+    }
   }
   button:nth-child(2) {
     background-color: $brand-primary;
     color: $text-on-primary;
+    &:hover {
+      background-color: $strong-brand;
+      transition: 500ms ease;
+    }
   }
 }
 
