@@ -30,8 +30,6 @@ export class AppComponent implements OnInit {
       this.convictState = this.animationData['convictState'];
       this.overlayState = this.animationData['overlayState'];
     })
-
-
   }
   receiveMessage($event) {
     this.convictState = $event['convictState'];

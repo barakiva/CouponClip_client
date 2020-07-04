@@ -1,22 +1,30 @@
 <div class="convict-box">
   <a href="#">< Continue Shopping</a>
   <div class="separator"></div>
-  <h3>Dougie's Dogs</h3>
+  <h3>{{deal.merchant.name}}</h3>
   <span>*****</span>
-  <h4>1072 2nd Avenue</h4>
-  <h4>Two Large Pizzas</h4>
-  <img src="https://api.discountapi.com/v2/deals/1988753/image?geometry=520x300F" alt="">
-  <p class="convict-box-description">"Choose from Six Options $35 for a margherita pizza or pasta dinner for two, redeemable Sunday–Thursday (up to $54 total value) $39 for a margherita pizza or pasta dinner for two, redeemable Friday or Saturday (up to $54 total value) One margherita pizza or two skillet pastas (up to $19 value) One caesar salad ($11 value)...</p>
+  <h4>{{deal.merchant.address}}</h4>
+  <h4>
+    {{(deal.shortTitle.length>30)? (deal.shortTitle |
+    slice:0:35)+'...':(deal.shortTitle)}}
+  </h4>
+  <img [src]="deal.imageUrl + param" alt="">
+  <p class="convict-box-description">
+    {{(deal.description.length > 330) ? (deal.description |
+    slice:0:330)+'...':(deal.description)}}
+  </p>
   <div class="cta-box">
     <div class="convict-box-price">
       <div class="discount-box">
-        <span class="previous-price">$20</span><span>$10</span><span class="discount-percentage">50% OFF</span>
+        <span class="previous-price">${{deal.value}}</span>
+        <span>${{deal.price}}</span><span class="discount-percentage">{{formatNumber()}} OFF</span>
       </div>
-      <div class="cta-box-savings">You've Saved: <span>10$</span></div>
+      <div class="cta-box-savings">You've Saved:
+        <span>$ {{deal.value - deal.price}}</span></div>
     </div>
     <div class="button-box">
       <button>Add to Cart</button>
-      <button>Get Coupon!</button>
+      <button (click)="goToMerchant()" >Get Coupon!</button>
     </div>
   </div>
 </div>

@@ -19,7 +19,14 @@ export class ConvictComponent implements OnInit {
 
     this.subscription = this.animationStateService.stateSource.subscribe(data => {
       this.deal = data['deal'];
+      console.log(this.deal);
     })
   }
-
+  public formatNumber(): string {
+    return new Intl.NumberFormat('en-IN',
+      {style: 'percent', minimumFractionDigits: 0}).format(this.deal.discountPercentage);
+  }
+  goToMerchant(){
+      window.location.href=this.deal['url'];
+  }
 }
