@@ -24,7 +24,7 @@ export class SuspectComponent implements OnInit {
   }
 
   public randomizeReviews(): number {
-    console.log(Math.floor(this.randomIntFromInterval(1000,10000)));
+    // console.log(Math.floor(this.randomIntFromInterval(1000,10000)));
     return Math.floor(this.randomIntFromInterval(1000,10000));
   }
   public randomizeRating(): number {

@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
+import {Observable, Subject} from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
+
 })
 export class AnimationStateService {
 
-  constructor() { }
+  convictState: Observable<string>;
+  overlayState = 'hidden';
+
+  convictStateSubject: Subject<string>;
+  overlayStateSubject: Subject<string>;
+
+  constructor() {
+    this.convictState
+  }
 }

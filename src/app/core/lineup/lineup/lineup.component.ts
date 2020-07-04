@@ -1,4 +1,4 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {DealApiService} from '../../../services/deal-api.service';
 import {Observable, Subscription} from 'rxjs';
 import {DealWrapper} from '../../../model/deal-wrapper';
@@ -10,13 +10,26 @@ import {Deal} from '../../../model/deal';
   styleUrls: ['./lineup.component.scss']
 })
 export class LineupComponent implements OnInit, OnDestroy {
-
   deals = [];
   subscription: Subscription;
   constructor(private dealAPi: DealApiService) { }
 
-  toggleConvict(): void {
+  convictState = "hidden";
+  overlayState = "hidden";
 
+  @Output() event = new EventEmitter<Object>();
+
+  toggleConvict(deal: Deal): void {
+    this.convictState =  "shown";
+    this.overlayState =  "shown";
+    console.log(this.convictState);
+    let obj = {
+      convictState: this.convictState,
+      overlayState: this.overlayState,
+      deal: deal
+    }
+
+    this.event.emit(obj);
   }
 
   ngOnInit() {
