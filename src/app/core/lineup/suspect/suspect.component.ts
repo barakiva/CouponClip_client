@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {CouponUtilityService} from '../../../services/coupon-utility.service';
 
 @Component({
   selector: 'app-suspect',
@@ -11,26 +12,14 @@ export class SuspectComponent implements OnInit {
   reviews: number;
   ratings: number;
 
-  constructor() {
-    this.reviews = this.randomizeReviews();
-    this.ratings = this.randomizeRating();
+  constructor(private couponUtility: CouponUtilityService) {
+    this.reviews = this.couponUtility.randomizeReviews();
+    this.ratings = this.couponUtility.randomizeRating();
   }
 
   ngOnInit() {
   }
-  public formatNumber(): string {
-    return new Intl.NumberFormat('en-IN',
-      {style: 'percent', minimumFractionDigits: 0}).format(this.deal.discountPercentage);
-  }
-
-  public randomizeReviews(): number {
-    // console.log(Math.floor(this.randomIntFromInterval(1000,10000)));
-    return Math.floor(this.randomIntFromInterval(1000,10000));
-  }
-  public randomizeRating(): number {
-    return this.randomIntFromInterval(3,5);
-  }
-  public randomIntFromInterval(min, max): number {
-    return Math.random() * (max - min + 1) + min;
+  get _couponUtility(): CouponUtilityService{
+    return this.couponUtility;
   }
 }

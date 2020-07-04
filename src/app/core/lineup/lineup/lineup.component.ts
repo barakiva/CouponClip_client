@@ -22,9 +22,7 @@ export class LineupComponent implements OnInit, OnDestroy {
       overlayState: "shown",
       deal: deal
     }
-
     this.animationStateService.changeState(state);
-
   }
 
   ngOnInit() {

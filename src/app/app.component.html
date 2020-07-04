@@ -1,7 +1,6 @@
 <app-sentry></app-sentry>
 <app-spine></app-spine>
-<app-lineup (event)="receiveMessage($event)"></app-lineup>
-<!--<button (click)="toggleConvict()">Trigger</button>-->
+<app-lineup></app-lineup>
 <app-convict [@convictState]="convictState"></app-convict>
 <div [@overlayState]="convictState" class="body-overlay"
       (click)="toggleOverlay()"></div>

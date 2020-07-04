@@ -8,9 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class SpineComponent implements OnInit {
 
   constructor() { }
-
   ngOnInit() {
-    console.log(this);
   }
-
 }

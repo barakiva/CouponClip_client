@@ -1,8 +1,6 @@
 @import "src/sass/variables";
 
 :host {
-  //flex: 0 0 33.3%;
-  //@include navBar(column);
   @include navBar(column);
   height: 335px;
   width: 319px;
@@ -11,8 +9,9 @@
   overflow: hidden;
   animation: 2s ease-in;
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2.5px);
     cursor: pointer;
+    transition: 0.4s ease 100ms;
   }
 }
 .img-box {
@@ -64,10 +63,8 @@
     grid-row: 3;
   }
   #offering-label {
-    //border-radius: 15%;
     color: $groupon-green;
-    //box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
-    box-shadow: 0px 0px 2.5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.15);
     width: 200px;
     height: 35px;
     font-size: 1.0rem;
@@ -76,8 +73,6 @@
     align-items: center;
   }
 }
-//.discount-box >
-
 .discount-box {
   grid-row: 4;
   margin-top: -20px;

@@ -1,7 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Deal} from '../../model/deal';
 import {AnimationStateService} from '../../services/animation-state.service';
 import {Subscription} from 'rxjs';
+import {CouponUtilityService} from '../../services/coupon-utility.service';
 
 @Component({
   selector: 'app-convict',
@@ -12,7 +13,8 @@ export class ConvictComponent implements OnInit {
   deal: Deal;
   readonly param = '?geometry=520x300F';
   subscription: Subscription;
-  constructor(private animationStateService: AnimationStateService) { }
+  constructor(private animationStateService: AnimationStateService,
+              private couponUtility: CouponUtilityService) { }
 
   ngOnInit() {
     console.log("convict born");
@@ -22,11 +24,11 @@ export class ConvictComponent implements OnInit {
       console.log(this.deal);
     })
   }
-  public formatNumber(): string {
-    return new Intl.NumberFormat('en-IN',
-      {style: 'percent', minimumFractionDigits: 0}).format(this.deal.discountPercentage);
-  }
+
   goToMerchant(){
       window.location.href=this.deal['url'];
+  }
+  get _couponUtility(): CouponUtilityService {
+    return this.couponUtility;
   }
 }

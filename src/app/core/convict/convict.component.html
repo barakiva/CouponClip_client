@@ -17,7 +17,7 @@
     <div class="convict-box-price">
       <div class="discount-box">
         <span class="previous-price">${{deal.value}}</span>
-        <span>${{deal.price}}</span><span class="discount-percentage">{{formatNumber()}} OFF</span>
+        <span>${{deal.price}}</span><span class="discount-percentage">{{_couponUtility.formatNumber(deal)}} OFF</span>
       </div>
       <div class="cta-box-savings">You've Saved:
         <span>$ {{deal.value - deal.price}}</span></div>

@@ -21,7 +21,7 @@
     <span class="original-price">${{deal.value}}</span>
     <span class="discounted-price">${{deal.price}}</span>
     <div class="discount-percentage">
-      <div>{{formatNumber()}} OFF</div>
+      <div>{{_couponUtility.formatNumber(deal)}} OFF</div>
     </div>
   </div>
   <div id="offering-box">

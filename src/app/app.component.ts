@@ -1,5 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {trigger, state, style, transition, animate} from '@angular/animations';
+import {Component, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {convictAnimation, overlayAnimation} from './animations/animations';
 import {AnimationStateService} from './services/animation-state.service';
@@ -11,33 +10,21 @@ import {AnimationStateService} from './services/animation-state.service';
   animations: [
     convictAnimation, overlayAnimation
   ]
-
 })
 export class AppComponent implements OnInit {
-
-  title = 'Couponly';
   convictState = 'hidden';
   overlayState = 'hidden';
-
   subscription: Subscription;
-  animationData: Object;
 
-  constructor(private animationStateService: AnimationStateService) {
-  }
+  constructor(private animationStateService: AnimationStateService) {}
   ngOnInit(): void {
     this.subscription = this.animationStateService.stateSource.subscribe(data => {
-      this.animationData = data;
-      this.convictState = this.animationData['convictState'];
-      this.overlayState = this.animationData['overlayState'];
+      this.convictState = data['convictState'];
+      this.overlayState = data['overlayState'];
     })
-  }
-  receiveMessage($event) {
-    this.convictState = $event['convictState'];
-    this.overlayState = $event['overlayState'];
   }
   toggleOverlay(): void {
     this.convictState = 'hidden';
     this.overlayState = 'hidden';
   }
-
 }

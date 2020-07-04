@@ -5,7 +5,6 @@
   grid-row: 1/2;
   @include navBar(row);
   background-color: $faded-grey;
-  //position: fixed;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
