@@ -15,6 +15,10 @@ export class LineupComponent implements OnInit, OnDestroy {
   subscription: Subscription;
   constructor(private dealAPi: DealApiService) { }
 
+  toggleConvict(): void {
+
+  }
+
   ngOnInit() {
     this.subscription = this.dealAPi.subject.subscribe(data => {
       this.deals = data;

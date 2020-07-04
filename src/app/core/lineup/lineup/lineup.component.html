@@ -1,5 +1,5 @@
 <div id="suspect-box" >
   <app-suspect class="mat-typography" [class.mat-elevation-z4] *ngFor="let deal of deals"
-               [deal]="deal">
+               [deal]="deal" (click)="toggleConvict()">
   </app-suspect>
 </div>

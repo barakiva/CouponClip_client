@@ -1,6 +1,7 @@
 <app-sentry></app-sentry>
 <app-spine></app-spine>
-<!--<app-lineup></app-lineup>-->
-<app-convict></app-convict>
-<!--<div class="overlay"></div>-->
+<app-lineup></app-lineup>
+<!--<button (click)="toggleConvict()">Trigger</button>-->
+<app-convict [@convictState]="convictState"></app-convict>
+<div [@overlayState]="convictState" class="body-overlay"></div>
 
