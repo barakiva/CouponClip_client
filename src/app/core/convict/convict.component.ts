@@ -1,4 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Deal} from '../../model/deal';
+import {AnimationStateService} from '../../services/animation-state.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-convict',
@@ -6,12 +9,17 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./convict.component.scss']
 })
 export class ConvictComponent implements OnInit {
-  @Input() deal;
+  deal: Deal;
   readonly param = '?geometry=520x300F';
-
-  constructor() { }
+  subscription: Subscription;
+  constructor(private animationStateService: AnimationStateService) { }
 
   ngOnInit() {
+    console.log("convict born");
+
+    this.subscription = this.animationStateService.stateSource.subscribe(data => {
+      this.deal = data['deal'];
+    })
   }
 
 }

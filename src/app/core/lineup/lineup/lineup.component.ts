@@ -3,6 +3,7 @@ import {DealApiService} from '../../../services/deal-api.service';
 import {Observable, Subscription} from 'rxjs';
 import {DealWrapper} from '../../../model/deal-wrapper';
 import {Deal} from '../../../model/deal';
+import {AnimationStateService} from '../../../services/animation-state.service';
 
 @Component({
   selector: 'app-lineup',
@@ -12,24 +13,18 @@ import {Deal} from '../../../model/deal';
 export class LineupComponent implements OnInit, OnDestroy {
   deals = [];
   subscription: Subscription;
-  constructor(private dealAPi: DealApiService) { }
-
-  convictState = "hidden";
-  overlayState = "hidden";
-
-  @Output() event = new EventEmitter<Object>();
+  constructor(private dealAPi: DealApiService,
+              private animationStateService: AnimationStateService) { }
 
   toggleConvict(deal: Deal): void {
-    this.convictState =  "shown";
-    this.overlayState =  "shown";
-    console.log(this.convictState);
-    let obj = {
-      convictState: this.convictState,
-      overlayState: this.overlayState,
+    let state = {
+      convictState: "shown",
+      overlayState: "shown",
       deal: deal
     }
 
-    this.event.emit(obj);
+    this.animationStateService.changeState(state);
+
   }
 
   ngOnInit() {

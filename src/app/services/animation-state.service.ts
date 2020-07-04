@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
-import {Observable, Subject} from 'rxjs';
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 
 })
 export class AnimationStateService {
+  stateSource = new Subject<any>();
+  // currentState = this.stateSource.asObservable();
 
   convictState: Observable<string>;
   overlayState = 'hidden';
@@ -14,6 +16,9 @@ export class AnimationStateService {
   overlayStateSubject: Subject<string>;
 
   constructor() {
-    this.convictState
+  }
+
+  changeState(state: Object){
+    this.stateSource.next(state);
   }
 }

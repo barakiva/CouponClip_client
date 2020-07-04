@@ -6,12 +6,12 @@ class Animations {
 export const convictAnimation =
   trigger('convictState', [
     state('hidden', style({
-      transform: 'translateX(560px)'
+
     })),
     state('shown', style({
-      transform: 'translateX(0px)'
+      right: '0',
     })),
-    transition('hidden <=> shown', animate('250ms ease-out'))
+    transition('hidden <=> shown', animate('300ms ease'))
   ]);
 export const overlayAnimation =
   trigger('overlayState', [
