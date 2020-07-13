@@ -14,10 +14,11 @@
 
 #suspect-box {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, 320px);
   grid-template-rows: repeat(auto-fill, 1fr);
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem;
+  justify-content: center;
   @media ($mobile) {
     //grid-template-columns: 1fr;
   }

@@ -20,8 +20,8 @@ export class LineupComponent implements OnInit, OnDestroy {
     let state = {
       convictState: "shown",
       overlayState: "shown",
-      deal: deal
     }
+    this.animationStateService.loadDeal(deal);
     this.animationStateService.changeState(state);
   }
 

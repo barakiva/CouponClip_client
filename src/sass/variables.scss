@@ -1,66 +1,48 @@
-$dp4: 0 6px 10px 0 rgba(0,0,0,0.14),
-      -6px 0px 10px 0 rgba(0,0,0,0.14);
-$dp1: 0 1px 1px 0 rgba(0,0,0,0.14),
-      0 2px 1px -1px rgba(0,0,0,0.12),
-      0 1px 3px 0 rgba(0,0,0,0.20);
-
 //Primary colors
+$brand-primary:#FF9146;
+$brand-strong: #FF7619;
+$strong-peach: #ffe1cc;
+
+$text-on-primary:#FFF1E7;
+$text-on-white:#3d4147;
+//Greens
 $primary-olive: #347800;
 $fresh-olive: #4C9513;
 $freshest-olive: #68B42E;
 //Achromatics
-$blued-grey: #F9F9FA;
 $lightest-grey:rgba(250,250,250,1.0);
 $light-grey:rgba(248,248,248,1.0);
 $faded-grey:rgba(246,246,246,1.0);
-
-//New colors
 $base-grey: #707070;
 $freshest-grey: #D3CDCD;
+//$blued-grey: #F9F9FA;
 
-$brand-primary:#FF9146;
-$strong-brand: #FF7619;
-$text-on-primary:#FFF1E7;
-$strong-peach: #ffe1cc;
+//Breakpoints
+$mobile:    "(max-width:499px)";
+$tablet:    "(min-width:500px) and (max-width:1004px)";
+$mobile-open:"(min-width:500px)";
+$tablet-open:"(min-width:1005px)";
+$laptop:    "(min-width:1095px) and (max-width:1281px)";
+$laptop-open:"(min-width:1095px)";
+$desktop:"(min-width:1282px)";
 
-$text-on-white:#D3CDCD;
-$text-on-white-spice: #3d4147;
+//Shadows
+$dp1: 0 1px 1px 0 rgba(0,0,0,0.14),
+  0 2px 1px -1px rgba(0,0,0,0.12),
+  0 1px 3px 0 rgba(0,0,0,0.20);
+$dp4: 0 6px 10px 0 rgba(0,0,0,0.14),
+  -6px 0px 10px 0 rgba(0,0,0,0.14);
 
-$test-color: beige;
-
-/* Responsive Variables (using Sass) */
-$mobile: "max-width:599px";
-$tablet-portrait: "min-width:600px";
-$tablet-landscape: "min-width:900px";
-$desktop: "min-width:1200px";
-$desktop-widescreen: "min-width:1800px";
-
-
+//Mixins
 @mixin navBar($direction){
   display: flex;
   flex-direction: $direction;
 }
-
 @mixin box($direction) {
   display: flex;
   flex-direction: $direction;
 }
-//breakpoints
-
-$mobile: "(min-width: 360)";
-
-
-/*.color-primary-3 { color: #265700 }*/
-/*.color-primary-4 { color: #163200 }*/
-/*.color-primary-1 { color: #68B42E }*/
-//--big-fs: 2.2rem;
-//--med-fs: 1.6rem;
-//--sm-fs: 1.4rem;
 
 //JUSTIFY IS HORIZONTAL
 //ALIGN IS VERTICAL
-//#707174
-
 $faded-green: #EAFCDE;
-$groupon-green: #348700;
-$white-bg-text-color: #707174;

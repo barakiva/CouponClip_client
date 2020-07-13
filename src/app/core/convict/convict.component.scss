@@ -24,7 +24,7 @@
     //}
 }
 button {outline: none;}
-a {text-decoration: none; color: $text-on-white-spice;}
+a {text-decoration: none; color: $text-on-white;}
 .separator {
   width:100%;
   border-bottom: 1px solid rgba(0,0,0,0.25);
@@ -37,7 +37,7 @@ a {text-decoration: none; color: $text-on-white-spice;}
   width: 100%;
   justify-content: flex-end;
   font-size: 1.6rem;
-  color: $text-on-white-spice;
+  color: $text-on-white;
   h3 {
     font-size: 3rem;
   }
@@ -110,7 +110,7 @@ a {text-decoration: none; color: $text-on-white-spice;}
     background-color: $brand-primary;
     color: $text-on-primary;
     &:hover {
-      background-color: $strong-brand;
+      background-color: $brand-strong;
       transition: 500ms ease;
     }
   }

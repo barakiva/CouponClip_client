@@ -3,12 +3,13 @@
 @import "src/sass/variables";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import '~@angular/material/theming';
+@import '~bootstrap/scss/bootstrap';
 
 // Normalizing
-html, body {
-  margin: 0;
-  padding: 0;
-}
+html {font-size: 62.5%;height: 100%;}
+/*Flex overrides min height bug*/
+body {display: flex;flex-direction: column;min-height: 100%;}
+html, body {margin: 0;padding: 0;}
 * {box-sizing: border-box;}
 img {max-width: 100%;display: block;}
 a {font-size: 1.8rem;}
@@ -24,23 +25,5 @@ button {outline: none;}
 ::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.08);
 }
-
-html {
-  font-size: 62.5%;
-  height: 100%;
-}
-body {
-  //Overriding min height inheritance bug
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-
-
-$custom-typography: mat-typography-config(
-  $font-family: '"Open Sans", sans-serif;'
-);
+$custom-typography: mat-typography-config($font-family: '"Open Sans", sans-serif;');
 @include mat-core($custom-typography);
-/* Importing Bootstrap SCSS file. */
-@import '~bootstrap/scss/bootstrap';

@@ -13,22 +13,25 @@ export class ConvictComponent implements OnInit {
   deal: Deal;
   readonly param = '?geometry=520x300F';
   subscription: Subscription;
+
   constructor(private animationStateService: AnimationStateService,
               private couponUtility: CouponUtilityService) { }
 
   ngOnInit() {
-    console.log("convict born");
-
-    this.subscription = this.animationStateService.stateSource.subscribe(data => {
-      this.deal = data['deal'];
-      console.log(this.deal);
+    this.subscription = this.animationStateService.dealSource.subscribe(data => {
+      this.deal = data;
     })
   }
-
   goToMerchant(){
       window.location.href=this.deal['url'];
   }
   get _couponUtility(): CouponUtilityService {
     return this.couponUtility;
+  }
+  closeConvict() {
+    this.animationStateService.changeState({
+      convictState: 'hidden',
+      overlayState: 'hidden'
+    })
   }
 }
