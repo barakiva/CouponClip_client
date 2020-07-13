@@ -1,18 +1,16 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "src/sass/variables";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import '~@angular/material/theming';
-@import '~bootstrap/scss/bootstrap';
 
 // Normalizing
-html {font-size: 62.5%;height: 100%;}
+html {font-size: 1px;height: 100%;}
 /*Flex overrides min height bug*/
 body {display: flex;flex-direction: column;min-height: 100%;}
 html, body {margin: 0;padding: 0;}
 * {box-sizing: border-box;}
 img {max-width: 100%;display: block;}
-a {font-size: 1.8rem;}
+a {text-decoration: none; color: $text-on-white;}
 button {outline: none;}
 ::-webkit-scrollbar {
   width: 6px !important;

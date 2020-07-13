@@ -1,10 +1,9 @@
 @import "./src/sass/variables";
 
 :host {
-  @include navBar(row);
-  flex:10;
-  align-items: center;
+  @include navBar(row);flex:10;align-items: center;
   margin-right: 60px;
+  @media #{$mobile} {display: none;}
 }
 #sign-in-btn {
   border-radius: 4px 0px 0px 4px;

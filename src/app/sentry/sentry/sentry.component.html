@@ -1,25 +1,17 @@
-<nav id="bootstrap-override" class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">CouponClip</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-    <form [formGroup]="couponForm"
-          class="form-inline my-2 my-lg-0"
-          (ngSubmit)="onSearchSubmit(couponForm.value)">
+<nav class="nav">
+  <div class="nav-burger fas fa-bars"></div>
+  <div class="nav-brand"><span class="nav-brand-logo" src="assets/logo.png"></span><a class="nav-brand-name" href="#">CouponClip</a></div>
 
-      <div id="location-bar">
-        <div>
-          <i class="fas fa-map-marker-alt"></i>
-        </div>
-        <input class="" formControlName="location" placeholder="City...">
-      </div>
-      <div class="separator"></div>
-
-      <div id="search-box">
-        <input formControlName="query" type="search" placeholder="Search Anything..." aria-label="Search">
-        <button class=" fas fa-search" type="submit"></button>
-      </div>
-
-    </form>
+  <form class="nav-search" [formGroup]="couponForm" (ngSubmit)="onSearchSubmit(couponForm.value)">
+    <div class="nav-search-location">
+      <div><i class="fas fa-map-marker-alt"></i></div>
+      <input class="" formControlName="location" placeholder="City...">
+    </div>
+    <div class="separator"></div>
+    <div class="nav-search-query">
+      <input formControlName="query" type="search" placeholder="Search Anything..." aria-label="Search">
+      <button class="fas fa-search" type="submit"></button>
+    </div>
+  </form>
 </nav>
 <app-user-domain></app-user-domain>
