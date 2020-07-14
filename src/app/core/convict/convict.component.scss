@@ -1,67 +1,35 @@
 @import "./src/sass/variables";
-
-:host {
-    @include navBar(column);
-    position: fixed;
-    top: 0;
-    right: -560px;
-    bottom: 0;
-    background-color: white;
-    /*box-shadow: 0 5px 10px rgba(0,0,0,1), 0 15px 40px rgba(0,0,0,0.2);*/
-    box-shadow: 0 4px 24px rgba(61,64,71,.2);
-    width: 560px;
-    padding: 30px 30px 15px 30px;
-    height: auto;
+//@media #{$mobile} {}
+//@media #{$mobile-open} {}
+:host {@include navBar(column);position: fixed;bottom: 0;z-index: 20;
+    background-color: white;box-shadow: 0 4px 24px rgba(61,64,71,.2);
+    padding: 30px 30px 15px 30px;height: auto;
     animation: right 300ms ease 1;
-    z-index: 20;
-    //@keyframes right {
-    //  from {
-    //    transform: translateX(0);
-    //  }
-    //  to {
-    //    transform: translateX(520);
-    //  }
-    //}
+
+    @media #{$mobile} {width: 85vw;right: -360px; top: 128px}
+    @media #{$mobile-open} {width: 560px;right: -560px; top: 0;}
 }
-button {outline: none;}
-a {text-decoration: none; color: $text-on-white;}
-.separator {
-  width:100%;
-  border-bottom: 1px solid rgba(0,0,0,0.25);
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-.convict-box {
+.separator {width:100%;border-bottom: 1px solid rgba(0,0,0,0.25);margin-top: 10px;margin-bottom: 15px;}
+.deal {
   @include navBar(column);
   height: 100%;
   width: 100%;
   justify-content: flex-end;
-  font-size: 1.6rem;
   color: $text-on-white;
-  h3 {
-    font-size: 3rem;
-  }
-  h4{
-    font-size: 2.2rem;
-    font-weight: 400;
-  }
-  img {
-    border-radius: 2%;
-  }
-  &-price {
-    @include navBar(row);
-    align-items: center;
-    justify-content: space-between;
-  }
-  &-description {
-    margin-top: 15px;
-    font-size: 1.8rem;
 
+  &-merchant-name {@media #{$mobile} {font-size: 20rem} @media #{$mobile-open} {font-size: 30rem; font-weight: 400;}}
+  &-address {@media #{$mobile} {font-size: 18rem} @media #{$mobile-open} {font-size: 28rem;}}
+  &-title {@media #{$mobile} {font-size: 18rem} @media #{$mobile-open} {font-size: 28rem;}}
+  img {border-radius: 2%;}
+  &-price {@include navBar(row);align-items: center;justify-content: space-between;}
+  &-description {margin-top: 15px;
+    @media #{$mobile} {font-size: 16rem;}
+    @media #{$mobile-open} {font-size: 26rem;}
   }
 }
-.cta-box {
+.deal-cta {
   margin-top: auto;
-  font-size: 2.0rem;
+  font-size: 20rem;
 
   &-savings span {
     color: $freshest-olive;
@@ -69,17 +37,17 @@ a {text-decoration: none; color: $text-on-white;}
   }
 }
 
-.discount-box {
+.deal-cta-discount {
   @include navBar(row);
   justify-content: space-between;
   span {
     margin-right: 10px;
   }
-  .previous-price {
+  .deal-cta-value {
     text-decoration: line-through;
     color: #777C83;
   }
-  .discount-percentage {
+  .deal-cta-percentage {
     color: $freshest-olive;
     font-weight: 700;
   }

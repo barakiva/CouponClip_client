@@ -1,7 +1,6 @@
-import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DealApiService} from '../../../services/deal-api.service';
-import {Observable, Subscription} from 'rxjs';
-import {DealWrapper} from '../../../model/deal-wrapper';
+import {Subscription} from 'rxjs';
 import {Deal} from '../../../model/deal';
 import {AnimationStateService} from '../../../services/animation-state.service';
 
@@ -27,9 +26,10 @@ export class LineupComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this.dealAPi.subject.subscribe(data => {
+      console.log(data);
       this.deals = data;
     })
-    // this.dealAPi.makeRequest( {location: 'nyc', query: ''})
+    this.dealAPi.makeRequest( {location: 'nyc', query: ''})
   }
 
 

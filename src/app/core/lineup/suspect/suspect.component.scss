@@ -73,7 +73,7 @@
     align-items: center;
   }
 }
-.discount-box {
+.deal-cta-discount {
   grid-row: 4;
   margin-top: -20px;
   display: flex;
@@ -91,7 +91,7 @@
     color:$fresh-olive;
     font-weight: 700;
   }
-  .discount-percentage {
+  .deal-cta-percentage {
     display: flex;
     background-color: $faded-green;
     color: $primary-olive;
@@ -101,7 +101,7 @@
     white-space: nowrap;
     div {
       font-weight: bold;
-      font-size: 1rem;
+      font-size: 14rem;
     }
   }
 }

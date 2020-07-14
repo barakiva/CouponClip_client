@@ -1,25 +1,25 @@
-<div class="convict-box">
+<div class="deal">
   <a href="#" (click)="closeConvict()">< Continue Shopping</a>
   <div class="separator"></div>
-  <h3>{{deal.merchant.name}}</h3>
-  <span>*****</span>
-  <h4>{{deal.merchant.address}}</h4>
-  <h4>
+  <h3 class="deal-merchant-name">{{deal.merchant.name}}</h3>
+  <span class="deal-reviews">*****</span>
+  <h4 class="deal-address">{{deal.merchant.address}}</h4>
+  <h4 class="deal-title">
     {{(deal.shortTitle.length>30)? (deal.shortTitle |
     slice:0:35)+'...':(deal.shortTitle)}}
   </h4>
   <img [src]="deal.imageUrl + param" alt="">
-  <p class="convict-box-description">
+  <p class="deal-description">
     {{(deal.description.length > 330) ? (deal.description |
     slice:0:330)+'...':(deal.description)}}
   </p>
-  <div class="cta-box">
-    <div class="convict-box-price">
-      <div class="discount-box">
-        <span class="previous-price">${{deal.value}}</span>
-        <span>${{deal.price}}</span><span class="discount-percentage">{{_couponUtility.formatNumber(deal)}} OFF</span>
+  <div class="deal-cta">
+    <div class="deal-cta-price">
+      <div class="deal-cta-discount">
+        <span class="deal-cta-value">${{deal.value}}</span>
+        <span>${{deal.price}}</span><span class="deal-cta-percentage">{{_couponUtility.formatNumber(deal)}} OFF</span>
       </div>
-      <div class="cta-box-savings">You've Saved:
+      <div class="deal-cta-savings">You've Saved:
         <span>$ {{deal.value - deal.price}}</span></div>
     </div>
     <div class="button-box">

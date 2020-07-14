@@ -1,7 +1,9 @@
-<app-sentry></app-sentry>
-<app-spine></app-spine>
-<app-lineup></app-lineup>
-<app-convict [@convictState]="convictState"></app-convict>
-<div [@overlayState]="convictState" class="body-overlay"
-      (click)="toggleOverlay()"></div>
+<main>
+  <app-sentry></app-sentry>
+  <app-spine></app-spine>
+  <app-lineup></app-lineup>
+  <app-convict [@convictState]="convictState"></app-convict>
+  <div [@overlayState]="convictState" class="body-overlay"
+       (click)="toggleOverlay()"></div>
+</main>
 
