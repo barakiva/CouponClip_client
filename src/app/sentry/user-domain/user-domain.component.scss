@@ -5,20 +5,8 @@
   margin-right: 60px;
   @media #{$mobile} {display: none;}
 }
-#sign-in-btn {
-  border-radius: 4px 0px 0px 4px;
-  background-color: $brand-primary;
-  color: $text-on-primary;
+#sign-in-btn {border: transparent; border-radius: 4px 0 0 4px;
+  background-color: $brand-primary;color: $text-on-primary;
 }
-#register-btn {
-  border-radius: 0px 4px 4px 0px;
-  border:1px solid $text-on-white;
-  color: $base-grey;
-}
-button {
-  width: 100px;
-  height: 34px;
-  font-size: 1.4rem;
-  outline: none;
-}
-
+#register-btn {border-radius: 0 4px 4px 0;border:1px solid #d3cdcd;color: $base-grey;}
+button {width: 100px;height: 34px;font-size: 14rem;}

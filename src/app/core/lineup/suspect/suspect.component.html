@@ -1,34 +1,17 @@
-<div class="img-box">
-  <img [src]="deal.imageUrl + param">
-</div>
-
-<div class="coupon-details">
-
-  <h3 class="merchant-name">{{deal.merchant.name}}</h3>
-<!--  Rating-->
-  <div class="rating-box">
-    <div class="star-rating">
-      <span [ngStyle]="{'width': 50% + 1}"></span>
-    </div>
-
+<div class="img-box"><img [src]="deal.imageUrl + param"></div>
+<div class="coupon">
+  <h3 class="coupon-merchant-name">{{deal.merchant.name}}</h3>
+  <div class="coupon-rating">
+    <div class="star-rating"><span [ngStyle]="{'width': 50% + 1}"></span></div>
   </div>
-<!--  location-->
-  <div class="merchant-location">
-    <span>{{deal.merchant.address}}</span>
+  <div class="coupon-address"><span>{{deal.merchant.address}}</span></div>
+  <div class="coupon-price">
+    <span class="coupon-price-value">${{deal.value}}</span>
+    <span class="coupon-price-cost">${{deal.price}}</span>
+    <div class="coupon-price-percentage"><div>{{_couponUtility.formatNumber(deal)}} OFF</div></div>
   </div>
-<!--  Price Information-->
-  <div class="discount-box">
-    <span class="original-price">${{deal.value}}</span>
-    <span class="discounted-price">${{deal.price}}</span>
-    <div class="deal-cta-percentage">
-      <div>{{_couponUtility.formatNumber(deal)}} OFF</div>
-    </div>
-  </div>
-  <div id="offering-box">
+  <div id="offering">
     <span>{{(deal.shortTitle.length>30)? (deal.shortTitle |
              slice:0:35)+'...':(deal.shortTitle)}}</span>
   </div>
-
 </div>
-
-  <!--  Offering with CTA on mouse hover in right-->

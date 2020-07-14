@@ -1,55 +1,24 @@
 @import "src/sass/variables";
 
-:host {
-  @include navBar(column);
-  height: 335px;
-  width: 319px;
-  box-shadow: $dp1;
-  color: hsla(0, 0%, 15%, 0.9);
-  overflow: hidden;
-  animation: 2s ease-in;
-  &:hover {
-    transform: translateY(-2.5px);
-    cursor: pointer;
-    transition: 0.4s ease 100ms;
-  }
+:host {@include navBar(column);height: 335px;width: 319px;
+  box-shadow: $dp1;color: hsla(0, 0%, 15%, 0.9);overflow: hidden;
+  animation: 2s ease-in;cursor: pointer;
+  &:hover {transform: translateY(-2.5px);transition: 0.4s ease 100ms;}
 }
-.img-box {
-  flex: 188;
-  max-height:188px;
-  img {
-    height: auto;
-    //Explicitly include dimensions to prevent layout shift in loading
-    //width: ;
-    border-radius: 2%;
-  }
-}
-.coupon-details {
-  flex: 147;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 2px;
-  gap: 2px;
-  text-overflow: '';
-  white-space: nowrap;
-  padding: 3px 10px;
-  h3 {
-    font-size: 1.6rem;
-  }
-  i {
-    color: yellow;
-  }
-
-  .merchant-name {
-    grid-row: 1;
+.img-box {flex: 188;max-height:188px;
+  img {height: auto;border-radius: 2%;}}
+.coupon {flex: 147;display: grid;grid-gap: 2px;gap: 2px;
+  text-overflow: '';white-space: nowrap;padding: 3px 10px;
+  &-merchant-name {
+    grid-row: 1;width: 300px;
     color: hsla(0, 0%, 15%, 0.9);
-    width: 300px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0;
+    text-overflow: ellipsis;white-space: nowrap;overflow: hidden;margin: 0;
+    @media #{$mobile} {font-size: 18rem;}
+    @media #{$mobile-open} {font-size: 16rem;}
   }
-  .rating-box {
+  i {color: yellow;}
+
+  .coupon-rating {
     grid-row: 2;
     justify-content: start;
     vertical-align: top;
@@ -59,8 +28,9 @@
       margin-left: 10px;
     }
   }
-  .merchant-location {
-    grid-row: 3;
+  &-address {grid-row: 3;
+    @media #{$mobile} {font-size: 16rem;}
+    @media #{$mobile-open} {font-size: 14rem;}
   }
   #offering-label {
     color: $primary-olive;
@@ -82,30 +52,35 @@
   & > *:not(:first-child)  {
     margin-left: 8px;
   }
-  .original-price {
-    text-decoration: line-through;
-    color: rgba(0,0,0,0.5);
-    font-weight: 700;
-  }
-  .discounted-price {
-    color:$fresh-olive;
-    font-weight: 700;
-  }
-  .deal-cta-percentage {
-    display: flex;
-    background-color: $faded-green;
-    color: $primary-olive;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    white-space: nowrap;
-    div {
-      font-weight: bold;
-      font-size: 14rem;
+  .coupon-price {
+    @media #{$mobile} {font-size: 16rem;}
+    @media #{$mobile-open} {font-size: 14rem;}
+    &-price-value {
+      text-decoration: line-through;
+      color: rgba(0,0,0,0.5);
+      font-weight: 700;
+    }
+    &-price-cost {
+      color:$fresh-olive;
+      font-weight: 700;
+    }
+    &-price-percentage {
+      display: flex;
+      background-color: $faded-green;
+      color: $primary-olive;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      white-space: nowrap;
+      div {
+        font-weight: bold;
+        font-size: 14rem;
+      }
     }
   }
+
 }
-#offering-box {
+#offering {
   grid-row: 5;
   margin-top: -10px;
 

@@ -1,39 +1,19 @@
 @import "./src/sass/variables";
 
-:host {
-    grid-column: 1/2;
-    grid-row: 1/3;
-    background-color: $lightest-grey;
-    align-items: center;
-    position: -webkit-sticky;
-    position: sticky;
-    top:0;
-    left: 0;
+:host {grid-column: 1/2;grid-row: 1/3;align-items: center;
+    position: -webkit-sticky;position: sticky;top:0;left: 0;
     height: 100vh;
-  @media only screen and (max-width: 599px) {
-    display: none;
-  }
+    background-color: $lightest-grey;
+    @media #{$mobile} {display: none;}
+    @media #{$mobile-open} {}
 }
-nav {
+.spine {
   margin-top: 66.25px;
-  ul {
-    list-style: none;
-    padding: 5px 10px;
-    @include navBar(column);
-    align-items: center;
-    justify-items: center;
+  &-nav {list-style: none;padding: 5px 10px;
+    @include navBar(column);align-items: center;justify-items: center;
+    i {font-size: 34rem;color: #d3cdcd;}
   }
-  li {
-    color: $text-on-white;
-    margin: 0.4rem;
-  }
-  a{
-    font-size: 3rem;
-  }
-  :hover {
-    color: $brand-primary;
-  }
-  #dollar-shame {
-    font-size: 3.7rem;
-  }
+  li {margin: 10rem;}
+  :hover {color: $brand-primary;}
+  #dollar-shame {font-size: 42rem}
 }
