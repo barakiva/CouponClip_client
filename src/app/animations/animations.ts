@@ -1,6 +1,6 @@
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
-class Animations {
+export class Animations {
 
 }
 export const convictAnimation =

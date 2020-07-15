@@ -8,12 +8,14 @@ import {Deal} from '../model/deal';
 })
 export class DealApiService {
   // readonly BASE_URL = 'http://localhost:5000/api';
+  readonly BASE_MOCK = 'https://515c552b-7f7c-4efb-99cb-4d9ad214ce89.mock.pstmn.io/stuff';
   readonly BASE_URL = 'http://52.211.5.17/api';
   readonly PATH = "/location-and-query"
 
   subject: Subject<Deal[]> = new Subject();
 
   constructor(private client: HttpClient) { }
+
 
   makeRequest(couponForm: any) {
     console.log(couponForm.location);
@@ -27,7 +29,7 @@ export class DealApiService {
 
     this.client
       .get<Deal[]>(
-      this.BASE_URL +this.PATH,
+      this.BASE_MOCK,
         options
       )
       .subscribe(data => {

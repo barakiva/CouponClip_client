@@ -12,12 +12,7 @@
 }
 }
 
-#suspect-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 320px);
-  grid-template-rows: repeat(auto-fill, 1fr);
-  grid-column-gap: 1.5rem;
-  grid-row-gap: 2rem;
+.suspect-box {display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, 320px);grid-template-rows: repeat(auto-fill, 1fr);
   justify-content: center;
   @media ($mobile) {
     //grid-template-columns: 1fr;

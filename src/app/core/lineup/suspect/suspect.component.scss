@@ -7,13 +7,14 @@
 }
 .img-box {flex: 188;max-height:188px;
   img {height: auto;border-radius: 2%;}}
-.coupon {flex: 147;display: grid;grid-gap: 2px;gap: 2px;
+
+.coupon {@include navBar(column); flex: 148; justify-content: space-between;
   text-overflow: '';white-space: nowrap;padding: 3px 10px;
   &-merchant-name {
     grid-row: 1;width: 300px;
     color: hsla(0, 0%, 15%, 0.9);
     text-overflow: ellipsis;white-space: nowrap;overflow: hidden;margin: 0;
-    @media #{$mobile} {font-size: 18rem;}
+    @media #{$mobile} {font-size: 16rem;}
     @media #{$mobile-open} {font-size: 16rem;}
   }
   i {color: yellow;}
@@ -27,9 +28,10 @@
       line-height: 24px;
       margin-left: 10px;
     }
+    //@media #{$mobile} {display: none;}
   }
   &-address {grid-row: 3;
-    @media #{$mobile} {font-size: 16rem;}
+    @media #{$mobile} {font-size: 14rem;}
     @media #{$mobile-open} {font-size: 14rem;}
   }
   #offering-label {
@@ -52,41 +54,21 @@
   & > *:not(:first-child)  {
     margin-left: 8px;
   }
-  .coupon-price {
-    @media #{$mobile} {font-size: 16rem;}
-    @media #{$mobile-open} {font-size: 14rem;}
-    &-price-value {
-      text-decoration: line-through;
-      color: rgba(0,0,0,0.5);
-      font-weight: 700;
-    }
-    &-price-cost {
-      color:$fresh-olive;
-      font-weight: 700;
-    }
-    &-price-percentage {
-      display: flex;
-      background-color: $faded-green;
-      color: $primary-olive;
-      justify-content: center;
-      align-items: center;
-      border-radius: 4px;
-      white-space: nowrap;
-      div {
-        font-weight: bold;
-        font-size: 14rem;
-      }
-    }
+
+
+}
+.coupon-price { display: flex; align-items: center;
+  @media #{$mobile} {font-size: 14rem;}
+  @media #{$mobile-open} {font-size: 14rem;}
+  &-value {text-decoration: line-through;color: rgba(0,0,0,0.5);font-weight: 700;}
+  &-cost {color:$fresh-olive;font-weight: 700; margin-left: 12px;}
+  &-percentage {display: flex;align-items: center; margin-left: 12px;
+    background-color: $faded-green;color: $primary-olive;border-radius: 4px;
+    white-space: nowrap;
+    div {font-weight: bold;font-size: 14rem;}
   }
-
 }
-#offering {
-  grid-row: 5;
-  margin-top: -10px;
-
-}
-
-
+#offering {font-size: 14rem;}
 
 $ratingSize: 125px;
 .star-rating {

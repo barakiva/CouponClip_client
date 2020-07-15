@@ -62,7 +62,7 @@
       }
     }
     //Location Marker
-    .location-marker {background-color: white; @include navBar(row);
+    .location-marker {background-color: white; @include navBar(row); height: 34px;
       @media #{$mobile} {grid-area: marker; justify-content: flex-end; border-radius: 0 8px 8px 0;}
       @media #{$mobile-open} {grid-area: marker;border-radius: 8px 0px 0px 8px;}
       i {font-size: 18rem;padding: 8px; @media #{$mobile} {align-self: flex-end}}
