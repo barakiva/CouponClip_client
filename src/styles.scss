@@ -4,7 +4,11 @@
 @import '~@angular/material/theming';
 
 // Normalizing
-html {font-size: 1px;height: 100%;}
+html {font-size: 1px;height: 100%;
+    @media #{$HD} {font-size: 1.1px;}
+    @media #{$widescreen} {font-size: 1.2px;}
+
+}
 /*Flex overrides min height bug*/
 body {display: flex;flex-direction: column;min-height: 100%;}
 html, body {margin: 0;padding: 0;}
@@ -12,6 +16,7 @@ html, body {margin: 0;padding: 0;}
 img {max-width: 100%;display: block;}
 a {text-decoration: none; color: $text-on-white;}
 button {outline: none;}
+input {outline: none;}
 ::-webkit-scrollbar {
   width: 6px !important;
   height: 6px !important;

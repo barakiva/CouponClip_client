@@ -4,8 +4,8 @@
 
   <form class="nav-search" [formGroup]="couponForm" (ngSubmit)="onSearchSubmit(couponForm.value)">
     <div class="nav-search-location">
-      <div><i class="fas fa-map-marker-alt"></i></div>
-      <input class="" formControlName="location" placeholder="City...">
+      <div class="location-marker"><i class="fas fa-map-marker-alt"></i></div>
+      <input class="location-input" formControlName="location" placeholder="City...">
     </div>
     <div class="separator"></div>
     <div class="nav-search-query">

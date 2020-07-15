@@ -24,7 +24,9 @@ $mobile-open:"(min-width:500px)";
 $tablet-open:"(min-width:1005px)";
 $laptop:    "(min-width:1095px) and (max-width:1281px)";
 $laptop-open:"(min-width:1095px)";
-$desktop:"(min-width:1282px)";
+$desktop:"(min-width:1282px) and (max-width:1439px)";
+$HD:"(min-width:1440px) and (max-width:1921px)";
+$widescreen:"(min-width:1922px)";
 
 //Shadows
 $dp1: 0 1px 1px 0 rgba(0,0,0,0.14),

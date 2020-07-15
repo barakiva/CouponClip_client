@@ -29,7 +29,7 @@ export class LineupComponent implements OnInit, OnDestroy {
       console.log(data);
       this.deals = data;
     })
-    this.dealAPi.makeRequest( {location: 'nyc', query: ''})
+    // this.dealAPi.makeRequest( {location: 'nyc', query: ''})
   }
 
 
