@@ -8,9 +8,16 @@ export class CouponUtilityService {
 
   constructor() { }
 
-  public formatNumber(deal: Deal): string {
+  public formatPercentage(deal: Deal): string {
     return new Intl.NumberFormat('en-IN',
       {style: 'percent', minimumFractionDigits: 0}).format(deal.discountPercentage);
+  }
+
+  public formatPrice(deal: Deal): string {
+    console.log(new Intl.NumberFormat('en-IN',
+      {minimumFractionDigits: 2}).format(deal.discountPercentage));
+    return new Intl.NumberFormat('en-IN',
+      {minimumFractionDigits: 2}).format(deal.discountPercentage);
   }
 
   public randomizeReviews(): number {

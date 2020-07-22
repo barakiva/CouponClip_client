@@ -1,31 +1,33 @@
 <div *ngIf="this.deal != null" class="deal">
-  <a class="deal-back-btn" href="#" (click)="closeConvict()">< Continue Shopping</a>
-  <div class="separator"></div>
-  <h3 class="deal-merchant-name">{{deal.merchant.name}}</h3>
-  <span class="deal-reviews">*****</span>
-  <span class="deal-address">{{deal.merchant.address}}</span>
-  <span class="deal-title">
-    {{ isDealTitleTooLong() ? (deal.shortTitle |
-    slice:0:35)+'...':(deal.shortTitle)}}
-  </span>
+  <section class="deal-roof">
+      <a class="deal-back-btn" href="#" (click)="closeConvict()">< Continue Shopping</a>
+      <div class="separator"></div>
+      <h3 class="deal-merchant-name">{{deal.merchant.name}}</h3>
+      <span class="deal-reviews">*****</span>
+      <span class="deal-address">{{deal.merchant.address}}</span>
+      <span class="deal-title">
+      {{ isDealTitleTooLong() ? (deal.shortTitle |
+        slice:0:35) + '...' : (deal.shortTitle)}}
+      </span>
+  </section>
 <!--  <img [src]="deal.imageUrl + param" alt="">-->
-  <img [src]="'https://via.placeholder.com/520x300'" alt="">
+  <img class="deal-image" [src]="'https://via.placeholder.com/520x300'" alt="">
   <p class="deal-description">
     {{ isDealDescriptionTooLong() ? (deal.description |
     slice:0: this.descriptionCharLimit)+'...':(deal.description)}}
   </p>
-  <div class="deal-cta">
-    <div class="deal-cta-price">
-      <div class="deal-cta-discount">
-        <span class="deal-cta-value">${{deal.value}}</span>
-        <span>${{deal.price}}</span><span class="coupon-price-percentage">{{this.couponUtility.formatNumber(deal)}} OFF</span>
-      </div>
-      <div class="deal-cta-savings">You've Saved:
-        <span>$ {{deal.value - deal.price}}</span></div>
+
+  <div class="cta">
+
+    <div class="cta-discount">
+      <span class="cta-value">${{deal.value}}</span>
+      <span>${{deal.price}}</span><span class="cta-percentage">{{this.couponUtility.formatPercentage(deal)}} OFF</span>
     </div>
-    <div class="button-box">
-      <button>Add to Cart</button>
-      <button (click)="goToMerchant()" >Get Coupon!</button>
-    </div>
+    <div class="cta-savings">You've Saved:
+    <span>$ {{ truncateSavings() }}</span></div>
+
+    <button class="btn-cart">Add to Cart</button>
+    <button class="btn-buy" (click)="goToMerchant()" >Get Coupon!</button>
+
   </div>
 </div>

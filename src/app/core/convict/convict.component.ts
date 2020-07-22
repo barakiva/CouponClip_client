@@ -32,11 +32,11 @@ export class ConvictComponent implements OnInit {
       overlayState: 'hidden'
     })
   }
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    console.log("resizing window");
-    this.setCharacterLimit();
-  }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event) {
+  //   console.log("resizing window");
+  //   this.setCharacterLimit();
+  // }
   setCharacterLimit(): void{
     const breakPoints = [
       {'device': 'mobile', width:499},
@@ -46,24 +46,18 @@ export class ConvictComponent implements OnInit {
       {'device': 'widescreen', width:1920},
     ];
 
-    const result = _
-      .chain(breakPoints)
-      .sortBy('width').reverse()
-      .filter(device => device.width <= window.innerWidth)
-      .head()
-      .value();
+    const deviceWidth = window.innerWidth;
 
-    const isMobile = result.width <= breakPoints[0].width;
-    const isTablet = result.width <= breakPoints[1].width;
-    const isLaptopAndHigher = result.width >= breakPoints[2].width;
+    const isMobile = deviceWidth <= breakPoints[0].width;
+    const isTablet = deviceWidth <= breakPoints[1].width;
+    const isLaptopAndHigher = deviceWidth >= breakPoints[2].width;
 
-    if (isMobile) {this.descriptionCharLimit = 68}
+    if (isMobile) {this.descriptionCharLimit = 100}
     if (isTablet) {this.descriptionCharLimit = 128}
     if (isLaptopAndHigher) {this.descriptionCharLimit = 330}
   }
   isDealDescriptionTooLong(): boolean{
     this.setCharacterLimit();
-    console.log(this.descriptionCharLimit);
     return this.deal.description.length > this.descriptionCharLimit;
   }
 
@@ -73,5 +67,10 @@ export class ConvictComponent implements OnInit {
 
   goToMerchant(){
     window.location.href=this.deal['url'];
+  }
+
+  truncateSavings(): string {
+    const savings = (this.deal.value - this.deal.price).toString();;
+    return savings.length > 4 ? savings.slice(0,4) : savings;
   }
 }
