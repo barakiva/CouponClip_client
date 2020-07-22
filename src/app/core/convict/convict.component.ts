@@ -44,18 +44,18 @@ export class ConvictComponent implements OnInit {
       {'device': 'laptop', width:1028},
       {'device': 'desktop', width:1440},
       {'device': 'widescreen', width:1920},
-    ]
+    ];
 
-    let result = _
+    const result = _
       .chain(breakPoints)
       .sortBy('width').reverse()
       .filter(device => device.width <= window.innerWidth)
       .head()
       .value();
 
-    let isMobile = result.width <= breakPoints[0].width;
-    let isTablet = result.width <= breakPoints[1].width;
-    let isLaptopAndHigher = result.width >= breakPoints[2].width;
+    const isMobile = result.width <= breakPoints[0].width;
+    const isTablet = result.width <= breakPoints[1].width;
+    const isLaptopAndHigher = result.width >= breakPoints[2].width;
 
     if (isMobile) {this.descriptionCharLimit = 68}
     if (isTablet) {this.descriptionCharLimit = 128}

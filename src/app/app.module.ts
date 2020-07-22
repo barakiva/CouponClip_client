@@ -11,7 +11,6 @@ import { SuspectComponent } from './core/lineup/suspect/suspect.component';
 import {HttpClientModule} from '@angular/common/http';
 import { UserDomainComponent } from './sentry/user-domain/user-domain.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -29,7 +28,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule,
     BrowserAnimationsModule
   ],
   providers: [],
