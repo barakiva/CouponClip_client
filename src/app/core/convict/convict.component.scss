@@ -16,10 +16,11 @@
   width: 100%;
   justify-content: flex-end;
   color: $text-on-white;
-
-  &-merchant-name {@media #{$mobile} {font-size: 20rem} @media #{$mobile-open} {font-size: 30rem; font-weight: 400;}}
-  &-address {@media #{$mobile} {font-size: 18rem} @media #{$mobile-open} {font-size: 28rem;}}
-  &-title {@media #{$mobile} {font-size: 18rem} @media #{$mobile-open} {font-size: 28rem;}}
+  &-back-btn {font-size: 14rem;}
+  &-merchant-name {@media #{$mobile} {font-size: 16rem} @media #{$mobile-open} {font-size: 16rem; font-weight: 400;}}
+  &-reviews {font-size: 14rem;}
+  &-address {@media #{$mobile} {font-size: 14rem} @media #{$mobile-open} {font-size: 14rem;}}
+  &-title {@media #{$mobile} {font-size: 14rem} @media #{$mobile-open} {font-size: 14rem;}}
   img {border-radius: 2%;}
   &-price {@include navBar(row);align-items: center;justify-content: space-between;}
   &-description {margin-top: 15px;
@@ -30,27 +31,20 @@
 .deal-cta {
   margin-top: auto;
   font-size: 20rem;
-
+  @media #{$mobile} {display: grid; grid-template-areas: "value discount"}
+  @media #{$mobile-open} {}
+  &-discount {@include navBar(row);
+    span {margin-right: 10px;}
+    @media #{$mobile} {justify-content: flex-start;}
+    @media #{$mobile-open} {justify-content: space-between;}
+  }
+  &-value {text-decoration: line-through;color: #777C83;}
   &-savings span {
     color: $freshest-olive;
     font-weight: 700;
+    @media #{$mobile} {}
   }
-}
-
-.deal-cta-discount {
-  @include navBar(row);
-  justify-content: space-between;
-  span {
-    margin-right: 10px;
-  }
-  .deal-cta-value {
-    text-decoration: line-through;
-    color: #777C83;
-  }
-  .coupon-price-percentage {
-    color: $freshest-olive;
-    font-weight: 700;
-  }
+  .coupon-price-percentage {color: $freshest-olive;font-weight: 700;}
 }
 
 .button-box {
@@ -63,7 +57,7 @@
   & button {
     border: 1px solid transparent;
     border-radius: 25px;
-    font-size: 1.9rem;
+    font-size: 19rem;
     padding: 5px 20px;
   }
   button:first-child {

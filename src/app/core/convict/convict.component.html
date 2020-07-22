@@ -1,23 +1,24 @@
-<div class="deal">
-  <a href="#" (click)="closeConvict()">< Continue Shopping</a>
+<div *ngIf="this.deal != null" class="deal">
+  <a class="deal-back-btn" href="#" (click)="closeConvict()">< Continue Shopping</a>
   <div class="separator"></div>
   <h3 class="deal-merchant-name">{{deal.merchant.name}}</h3>
   <span class="deal-reviews">*****</span>
-  <h4 class="deal-address">{{deal.merchant.address}}</h4>
-  <h4 class="deal-title">
-    {{(deal.shortTitle.length>30)? (deal.shortTitle |
+  <span class="deal-address">{{deal.merchant.address}}</span>
+  <span class="deal-title">
+    {{ isDealTitleTooLong() ? (deal.shortTitle |
     slice:0:35)+'...':(deal.shortTitle)}}
-  </h4>
-  <img [src]="deal.imageUrl + param" alt="">
+  </span>
+<!--  <img [src]="deal.imageUrl + param" alt="">-->
+  <img [src]="'https://via.placeholder.com/520x300'" alt="">
   <p class="deal-description">
-    {{(deal.description.length > 330) ? (deal.description |
-    slice:0:330)+'...':(deal.description)}}
+    {{ isDealDescriptionTooLong() ? (deal.description |
+    slice:0: this.descriptionCharLimit)+'...':(deal.description)}}
   </p>
   <div class="deal-cta">
     <div class="deal-cta-price">
       <div class="deal-cta-discount">
         <span class="deal-cta-value">${{deal.value}}</span>
-        <span>${{deal.price}}</span><span class="coupon-price-percentage">{{_couponUtility.formatNumber(deal)}} OFF</span>
+        <span>${{deal.price}}</span><span class="coupon-price-percentage">{{this.couponUtility.formatNumber(deal)}} OFF</span>
       </div>
       <div class="deal-cta-savings">You've Saved:
         <span>$ {{deal.value - deal.price}}</span></div>
@@ -28,6 +29,3 @@
     </div>
   </div>
 </div>
-
-
-<!--Before any selection, gives general tips and advice about product category-->

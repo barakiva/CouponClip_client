@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {DealApiService} from '../../../services/deal-api.service';
 import {Subscription} from 'rxjs';
 import {Deal} from '../../../model/deal';
-import {AnimationStateService} from '../../../services/animation-state.service';
+import {ConvictStateService} from '../../../services/ConvictStateService';
 
 @Component({
   selector: 'app-lineup',
@@ -13,7 +13,7 @@ export class LineupComponent implements OnInit, OnDestroy {
   deals = [];
   subscription: Subscription;
   constructor(private dealAPi: DealApiService,
-              private animationStateService: AnimationStateService) { }
+              private animationStateService: ConvictStateService) { }
 
   toggleConvict(deal: Deal): void {
     let state = {
@@ -26,7 +26,6 @@ export class LineupComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.subscription = this.dealAPi.subject.subscribe(data => {
-      console.log(data);
       this.deals = data;
     })
     this.dealAPi.makeRequest( {location: 'nyc', query: ''})

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {convictAnimation, overlayAnimation} from './animations/animations';
-import {AnimationStateService} from './services/animation-state.service';
+import {ConvictStateService} from './services/ConvictStateService';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   overlayState = 'hidden';
   subscription: Subscription;
 
-  constructor(private animationStateService: AnimationStateService) {}
+  constructor(private animationStateService: ConvictStateService) {}
   ngOnInit(): void {
     this.subscription = this.animationStateService.stateSource.subscribe(data => {
       this.convictState = data['convictState'];
