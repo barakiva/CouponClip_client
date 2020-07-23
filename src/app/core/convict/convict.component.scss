@@ -31,18 +31,19 @@
 
   &-price {@include navBar(row);align-items: center;justify-content: space-between;}
   &-description {grid-area:desc;margin-top: 15px;
-    @media #{$mobile} {font-size: 16rem;}
+    @media #{$mobile} {font-size: 14rem;}
     @media #{$mobile-open} {font-size: 26rem;}
   }
 }
 .cta {grid-area: cta; display: grid;
-  font-size: 20rem;
-  @media #{$mobile} { grid-template-areas: "disc disc"
-                                           "sav sav"
+
+  @media #{$mobile} { grid-template-areas: "disc sav"
                                            "cart buy";
+    font-size: 14rem;
   }
   @media #{$mobile-open} {grid-template-areas: "disc disc disc . sav"
                                                "cart cart cart . buy";
+    font-size: 16rem;
   }
   &-discount {grid-area: disc;
     @include navBar(row);
@@ -55,10 +56,10 @@
     @media #{$mobile-open} {grid-area: disc;}
     text-decoration: line-through;color: #777C83;}
   &-savings {grid-area: sav;
+    @media #{$mobile} {justify-self: flex-end;}
     span {
       color: $freshest-olive;
       font-weight: 700;
-      @media #{$mobile} {}
     }
   }
   &-percentage { color: $freshest-olive;font-weight: 700;}
@@ -67,7 +68,9 @@
 
 
 button {border: 1px solid transparent;border-radius: 25px;
-  font-size: 19rem;padding: 5px 20px; width: 180px;
+  padding: 5px 20px; width: 120px;
+  @media #{$mobile} {font-size: 13rem;}
+  @media #{$mobile-open} {font-size: 19rem; width: 180px;}
 }
 .btn-cart {grid-area: cart; justify-self: flex-start; background-color: $text-on-primary;color: $brand-primary;
   &:hover {background-color: $strong-peach;transition: 500ms ease;}

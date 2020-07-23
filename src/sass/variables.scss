@@ -18,6 +18,7 @@ $freshest-grey: #D3CDCD;
 //$blued-grey: #F9F9FA;
 
 //Breakpoints
+$mobile-small:"(min-width:320px) and (max-width:374px)";
 $mobile:    "(max-width:499px)";
 $tablet:    "(min-width:500px) and (max-width:1004px)";
 $mobile-open:"(min-width:500px)";

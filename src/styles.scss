@@ -5,8 +5,9 @@
 
 // Normalizing
 html {font-size: 1px;height: 100%;
-    @media #{$HD} {font-size: 1.1px;}
-    @media #{$widescreen} {font-size: 1.2px;}
+  @media #{$mobile-small} {font-size: 0.8px;}
+  @media #{$HD} {font-size: 1.1px;}
+  @media #{$widescreen} {font-size: 1.2px;}
 
 }
 /*Flex overrides min height bug*/
