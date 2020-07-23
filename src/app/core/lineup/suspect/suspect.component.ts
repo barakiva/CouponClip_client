@@ -8,7 +8,7 @@ import {CouponUtilityService} from '../../../services/coupon-utility.service';
 })
 export class SuspectComponent implements OnInit {
   @Input() deal;
-  readonly param = '?geometry=319x188F';
+  readonly pictureApiParams = '?geometry=319x188F';
   reviews: number;
   ratings: number;
 

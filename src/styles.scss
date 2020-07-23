@@ -6,6 +6,9 @@
 // Normalizing
 html {font-size: 1px;height: 100%;
   @media #{$mobile-small} {font-size: 0.8px;}
+  @media #{$tablet} {font-size: 1.1px;}
+  @media #{$laptop} {font-size: 1.1px;}
+  @media #{$desktop} {font-size: 1.1px;}
   @media #{$HD} {font-size: 1.1px;}
   @media #{$widescreen} {font-size: 1.2px;}
 

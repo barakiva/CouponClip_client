@@ -10,8 +10,8 @@
         slice:0:35) + '...' : (deal.shortTitle)}}
       </span>
   </section>
-<!--  <img [src]="deal.imageUrl + param" alt="">-->
-  <img class="deal-image" [src]="'https://via.placeholder.com/520x300'" alt="">
+  <img class="deal-image" [src]="deal.imageUrl + this.pictureApiParams" alt="">
+<!--  <img class="deal-image" [src]="'https://via.placeholder.com/520x300'" alt="">-->
   <p class="deal-description">
     {{ isDealDescriptionTooLong() ? (deal.description |
     slice:0: this.descriptionCharLimit)+'...':(deal.description)}}

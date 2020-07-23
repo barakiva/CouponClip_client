@@ -36,7 +36,7 @@
   &-price {@include navBar(row);align-items: center;justify-content: space-between;}
   &-description {grid-area:desc;margin-top: 15px;
     @media #{$mobile} {font-size: 14rem;}
-    @media #{$mobile-open} {font-size: 26rem;}
+    @media #{$mobile-open} {font-size: 14rem;}
   }
 }
 .cta {grid-area: cta; display: grid;
@@ -82,5 +82,3 @@ button {border: 1px solid transparent;border-radius: 25px;
 .btn-buy {grid-area: buy; justify-self: flex-end;  background-color: $brand-primary;color: $text-on-primary;
   &:hover {background-color: $brand-strong;transition: 500ms ease;}
 }
-
-
