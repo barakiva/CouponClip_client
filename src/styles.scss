@@ -11,7 +11,7 @@ html {font-size: 1px;height: 100%;
 
 }
 /*Flex overrides min height bug*/
-body {display: flex;flex-direction: column;min-height: 100%; font-family: "Open Sans"}
+body {display: flex;flex-direction: column;min-height: 100%;font-family: "Open Sans", sans-serif}
 html, body {margin: 0;padding: 0;}
 * {box-sizing: border-box;}
 img {max-width: 100%;display: block;}

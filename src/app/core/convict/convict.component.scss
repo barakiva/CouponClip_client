@@ -19,12 +19,16 @@
   height: 100%;
   width: 100%;
   color: $text-on-white;
-  &-roof {grid-area: roof;
+  &-roof {grid-area: roof; @include navBar(column);
     .deal-back-btn {font-size: 14rem;}
     .deal-merchant-name {@media #{$mobile} {font-size: 16rem} @media #{$mobile-open} {font-size: 16rem; font-weight: 400;}}
-    .deal-reviews {font-size: 14rem;}
-    .deal-address {@media #{$mobile} {font-size: 14rem} @media #{$mobile-open} {font-size: 14rem;}}
-    .deal-title {@media #{$mobile} {font-size: 14rem} @media #{$mobile-open} {font-size: 14rem;}}
+    .deal-reviews {font-size: 14rem; padding: 3px 0;}
+    .deal-address {padding: 3px 0;
+      @media #{$mobile} {font-size: 14rem}
+      @media #{$mobile-open} {font-size: 14rem;}}
+    .deal-title {padding: 3px 0;
+      @media #{$mobile} {font-size: 14rem}
+      @media #{$mobile-open} {font-size: 14rem;}}
   }
 
   &-image {grid-area: img; border-radius: 2%;}
